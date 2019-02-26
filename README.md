@@ -28,6 +28,8 @@ A curated list of software related to automatic Exploratory Data Analysis
 
 - [RtutoR](https://github.com/anup50695/RtutoR) (GitHub repo) - learning material with a automatic reports module. More at [R-Bloggers](https://www.r-bloggers.com/automating-basic-eda/).
 
+- [visdat](https://github.com/ropensci/visdat) (CRAN package) - 6 exploratory/diagnostic plots for initial data analysis.
+
 ## Python libraries
 
 - [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
