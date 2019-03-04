@@ -1,0 +1,43 @@
+---
+title: "Automatic Exploratory Data Analysis Tools in R - an Overview"
+author: "Mateusz Staniak"
+date: "`r format(Sys.time(), '%d - %m - %Y')`"
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float: true
+    code_folding: hide
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+# Introduction
+
+
+# Automatic EDA Tasks
+
+
+# Overview of R Tools for autoEDA
+
+
+## CRAN packages
+
+
+## GitHub packages
+
+
+# Summary
+
+
+## Strengths 
+
+
+## Weaknesses 
+
