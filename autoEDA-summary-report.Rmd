@@ -20,9 +20,25 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Introduction
 
+With autoML tools like h2o Driverless AI or autoKeras, building predictive models is becoming easier and faster. 
+But the first step in every Data Science project is understanding the particular dataset and the patterns that can be found inside it.
+We call it Exploratory Data Analysis.
+In this report I will summarise the existing R tools for automatic or fast EDA.
+
+TODO: glebszy wstep
 
 # Automatic EDA Tasks
 
+EDA tools have multiple possible goals and most of the tools only try to address some of them.
+
+TODO: rozbudowac ten akapit
+
+  - Whole dataset summaries: provide information about sample size, number of variable and their types, possibly relationships between several datasets and meta-data such amount of disk space used.
+  - Data validity: perform checks related to missing data and atypical values.
+  - Univariate summaries: depends on variable type. For numerical variables, usually typical descriptive statistics such as centrality and dispersion measures, for categorical data, unique levels and associated counts.
+  - Bivariate summaries: present simple relationships, either between one variable of interest and all other variables (contigency tables, scatter plots, survival curves, plots of distribution (boxplots, histograms, bar plots) by values of a variable) or all pairs of variables (correlation matrices and plots).
+  - Feature engineering: make variables more suitable for modeling. This includes PCA and other dimension reduction techniques, merging levels of categorical variables, transforming numerical variables (for example Box-Cox transformation).
+  - Data visualization: finding visual insight in the data.
 
 # Overview of R Tools for autoEDA
 
