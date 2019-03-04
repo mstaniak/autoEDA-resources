@@ -1,5 +1,6 @@
 # autoEDA-resources
-A curated list of software related to automatic Exploratory Data Analysis
+
+A list of software related to automatic Exploratory Data Analysis
 
 
 ## R packages
@@ -29,6 +30,11 @@ A curated list of software related to automatic Exploratory Data Analysis
 - [RtutoR](https://github.com/anup50695/RtutoR) (GitHub repo) - learning material with a automatic reports module. More at [R-Bloggers](https://www.r-bloggers.com/automating-basic-eda/).
 
 - [visdat](https://github.com/ropensci/visdat) (CRAN package) - 6 exploratory/diagnostic plots for initial data analysis.
+
+- [RBioPlot](https://github.com/jzhangc/git_R_STATS_KBS) (GitHub package) - automated data analysis and visualization for molecular biology. Details can be found [in the paper at NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045883/).
+
+- [dlookr](https://cran.r-project.org/web/packages/dlookr/) (CRAN package) - tools for data quality diagnosis and basic exploration.
+
 
 ## Python libraries
 
