@@ -35,6 +35,7 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [dlookr](https://cran.r-project.org/web/packages/dlookr/) (CRAN package) - tools for data quality diagnosis and basic exploration.
 
+- [vtreat](https://cran.r-project.org/web/packages/vtreat/index.html) (CRAN package) - data treatment (pre-processing) that includes dealing with missing data and large categorical variables. Details can be found in the [paper about vtreat](https://arxiv.org/pdf/1611.09477.pdf).
 
 ## Python libraries
 
