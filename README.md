@@ -44,17 +44,9 @@ A list of software related to automatic Exploratory Data Analysis
 - [EDA](https://github.com/JamesDavidLawrence/EDA) - stub of a package.
 
 
-### Other Packages 
-
-
-
-
-
 ## Python libraries
 
-- [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
-
-- [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
+### Complete Packages
 
 - [Dora](https://github.com/NathanEpstein/Dora) (pip library) - data cleaning, featuring engineering and simple modeling tools.
 
@@ -67,8 +59,14 @@ A list of software related to automatic Exploratory Data Analysis
 - [lens](https://github.com/facultyai/lens) (pip library) - fast calculation of summary statistics and correlations. [Presentation about the library](https://www.slideshare.net/VictorZabalza/automated-data-exploration-building-efficient-analysis-pipelines-with-dask-81328214).
 
 - [speedML](https://speedml.com) (pip library) - large library for ML with module dedicated to fast EDA. 
- 
- 
+
+### Packages in Development
+
+- [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
+
+- [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
+
+
 ## Web services
 
 - [DIVE](https://dive.media.mit.edu/) - MIT's tools for data exploration that tries to choose best (most informative) visualizations.
