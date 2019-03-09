@@ -1,3 +1,11 @@
 
 \.Rhistory
 \.Rproj.user*
+
+usecase/data/compas-scores-raw\.csv
+
+usecase/data/cox-violent-parsed_filt\.csv
+
+usecase/data/propublicaCompassRecividism_data_fairml\.csv/propublica_data_for_fairml\.csv
+
+usecase/data/propublicaCompassRecividism_data_fairml\.csv/\._propublica_data_for_fairml\.csv
