@@ -29,6 +29,8 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [xray](https://cran.r-project.org/package=xray) (CRAN package) - first look at the data - distributions and anomalies. More in the [blog post](https://www.r-bloggers.com/xray-the-r-package-to-have-x-ray-vision-on-your-datasets/).
 
+- [arsenal](https://cran.r-project.org/package=arsenal) (CRAN package) - statistical summaries (models and exploration) and quick reporting.
+
 ### Packages in Development
 
 - [AEDA](https://github.com/tuanle618/AEDA) (GitHub package) - summary statistics, correlation analysis, cluster analysis, PCA & other projections.
