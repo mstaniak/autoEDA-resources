@@ -27,7 +27,7 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has a automatic reporting module which selects best plots that summarise different projection techniques.
 
-
+- [xray](https://cran.r-project.org/package=xray) (CRAN package) - first look at the data - distributions and anomalies. More in the [blog post](https://www.r-bloggers.com/xray-the-r-package-to-have-x-ray-vision-on-your-datasets/).
 
 ### Packages in Development
 
