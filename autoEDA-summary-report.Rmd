@@ -167,6 +167,8 @@ Results of each function can be saved to a short report.
 
 # Feature Comparison
 
+In this section, I will compare how different packages address autoEDA tasks.
+
 ##  Whole dataset summaries
 
 `visdat` package offers most original summaries of full dataset. 
@@ -234,14 +236,37 @@ knitr::kable(funModeling::categ_analysis(recid, "race", "is_recid")) %>%
   
 ## Feature engineering 
 
+The `dataMaid` package assumes that every decision regarding the data should be made by the analyst and does not provide any tools for data manipulation after diagnosis.
+Most of the packages only provide exploration tools.
+Exceptions are `dlookr`, `funModeling` and `DataExplorer`.
+`DataExplorer` tools are limited to imputation by a constant, merging levels of factors and creating dummy variables.
+
+The `dlookr` package can create a report that presents different possible transformations of features.
+Missing values can be imputed by mean/median/mode and distributions of variables before and after the procedure compared.
+The same is done for imputation of outliers.
+Logarithmic and root square transforms are proposed for skewed variables.
+Different methods of binning continuous variables are also presented, including Weight of the Evidence.
+
+The `funModeling` package can perform discretization of variable using equal frequency criterion or gain ratio maximization.
+It can also scale variables to the interval [0, 1].
+Outliers can be treated using Tukey or Hampel method.
+
 ## Data visualization
+
+Data visualization is mostly limited to univariate and bivariate plots described above. 
+Some original visualizations for whole dataset are provided by `visdat` package.
+Currently, none of the packages perform visualization recommendation.
+Available plots are limited to standard uni- and bivariate graphics.
 
 ## Quick reporting
 
 `DataExplorer`, `dlookr` and `dataMaid` packages are capable of generating good quality reports.
 They consists of all (or most) possible outputs of the package which are organized either by variable (`dataMaid`, `dlookr`) or by type of variable (`DataExplorer`).
 `autoEDA` package generates a minimal report with bivariate plots.
+Example reports from these packages can be found in the `usecase/` directory.
 Packages `arsenal`, `funModeling` and `xray` have an option of saving outputs to files.
+
+
 
 # Summary
 

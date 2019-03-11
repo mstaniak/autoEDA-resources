@@ -351,6 +351,7 @@ div.tocify {
 </div>
 <div id="feature-comparison" class="section level1">
 <h1><span class="header-section-number">4</span> Feature Comparison</h1>
+<p>In this section, I will compare how different packages address autoEDA tasks.</p>
 <div id="whole-dataset-summaries" class="section level2">
 <h2><span class="header-section-number">4.1</span> Whole dataset summaries</h2>
 <p><code>visdat</code> package offers most original summaries of full dataset.</p>
@@ -530,13 +531,17 @@ Asian
 </div>
 <div id="feature-engineering" class="section level2">
 <h2><span class="header-section-number">4.5</span> Feature engineering</h2>
+<p>The <code>dataMaid</code> package assumes that every decision regarding the data should be made by the analyst and does not provide any tools for data manipulation after diagnosis. Most of the packages only provide exploration tools. Exceptions are <code>dlookr</code>, <code>funModeling</code> and <code>DataExplorer</code>. <code>DataExplorer</code> tools are limited to imputation by a constant, merging levels of factors and creating dummy variables.</p>
+<p>The <code>dlookr</code> package can create a report that presents different possible transformations of features. Missing values can be imputed by mean/median/mode and distributions of variables before and after the procedure compared. The same is done for imputation of outliers. Logarithmic and root square transforms are proposed for skewed variables. Different methods of binning continuous variables are also presented, including Weight of the Evidence.</p>
+<p>The <code>funModeling</code> package can perform discretization of variable using equal frequency criterion or gain ratio maximization. It can also scale variables to the interval [0, 1]. Outliers can be treated using Tukey or Hampel method.</p>
 </div>
 <div id="data-visualization" class="section level2">
 <h2><span class="header-section-number">4.6</span> Data visualization</h2>
+<p>Data visualization is mostly limited to univariate and bivariate plots described above. Some original visualizations for whole dataset are provided by <code>visdat</code> package. Currently, none of the packages perform visualization recommendation. Available plots are limited to standard uni- and bivariate graphics.</p>
 </div>
 <div id="quick-reporting" class="section level2">
 <h2><span class="header-section-number">4.7</span> Quick reporting</h2>
-<p><code>DataExplorer</code>, <code>dlookr</code> and <code>dataMaid</code> packages are capable of generating good quality reports. They consists of all (or most) possible outputs of the package which are organized either by variable (<code>dataMaid</code>, <code>dlookr</code>) or by type of variable (<code>DataExplorer</code>). <code>autoEDA</code> package generates a minimal report with bivariate plots. Packages <code>arsenal</code>, <code>funModeling</code> and <code>xray</code> have an option of saving outputs to files.</p>
+<p><code>DataExplorer</code>, <code>dlookr</code> and <code>dataMaid</code> packages are capable of generating good quality reports. They consists of all (or most) possible outputs of the package which are organized either by variable (<code>dataMaid</code>, <code>dlookr</code>) or by type of variable (<code>DataExplorer</code>). <code>autoEDA</code> package generates a minimal report with bivariate plots. Example reports from these packages can be found in the <code>usecase/</code> directory. Packages <code>arsenal</code>, <code>funModeling</code> and <code>xray</code> have an option of saving outputs to files.</p>
 </div>
 </div>
 <div id="summary" class="section level1">
