@@ -26,8 +26,11 @@ library(dplyr)
 library(mlr)
 library(ggplot2)
 library(xray)
+library(kableExtra)
 
 load("usecase/data/recid.rda")
+
+recid_small <- select(recid, is_recid, age, race, priors_count)
 ```
 
 
@@ -182,17 +185,63 @@ Most packages that provide a whole dataset summary take a similar approach and p
 
 Some package offer automated checks for the data. 
 This include at least outlier detection. 
-The `dataMaid` package's main purpose is to 
+The `dataMaid` package's main purpose is to find inconsistencies and errors in the data.
+It finds possible outliers, missing values, low-frequency and possibly mis-encoded levels of factors.
+All these information can be summarized in a quality report.
+The `dlookr` package offers similar functionality.
+There are two main differences:
+  
+  - the report does not contain possible mis-encoded factors,
+  - outlier analysis is supplemented with plots showing variable distribution before and after removing the outliers.
+  
+The analysis is rather simple, for example in zero-inflated variables non-zero values are treated as outliers (`dlookr`).
+
 
 ## Univariate summaries
+
+All the tools that support univariate analysis take a similar approach.
+For categorical variables, counts are reported and bar plots are presented, while histogram or boxplots and typical descriptive statistics (including quantiles, sometimes skewness) are used for continous variables.
+
+In `dataMaid` and `dlookr` packagas, these plots are presented variable-by-variable in the report.
+In other packages (`dataExplorer`, `funModeling`) groups of plots are shown together (wall of histograms, wall of  barplots).
+Notably, the `dlookr` reports skewness of variables and shows the distribution after some candidate transformations to reduce the the skewness.
+This package also reports normality.
+
   
 ## Bivariate summaries
+
+The `funModeling` package only support calculating correlations between variables and a specified target.
+`DataExplorer`, `vis_dat` and `DataExplorer` packages can plot correlation matrices.
+They differ in categorical variables treatment. 
+Some packages require only numerical features (`vis_dat`).
+Interestingly, in `DataExplorer`, low-cardinality categorical features are converted to 0-1  variables and plotted alongside numerical variables.
+
+```{r }
+DataExplorer::plot_correlation(recid_small)
+```
+
+The report from `autoEDA` package consists of a limited number of bar plots / boxplots with target variable as one of the dimensions.
+The `arsenal` package only presents variable summaries by levels of a chosen categorical variable.
+Similarly, in `DataExplorer`, `dlookr` and `funModeling`, scatter plots and boxplots with a specified target variable on one of the axis can be plotted.
+Additionally, `funModeling` and `dlookr` draw histograms/densities of continuous features by target.
+The `funModeling` package also has unique options of drawing barplots of discretized variable by target and quantitative analysis for binary outcome based on representativeness and accuracy.
+
+```{r }
+knitr::kable(funModeling::categ_analysis(recid, "race", "is_recid")) %>%
+  kable_styling(full_width = F)
+```
+
   
 ## Feature engineering 
 
 ## Data visualization
 
 ## Quick reporting
+
+`DataExplorer`, `dlookr` and `dataMaid` packages are capable of generating good quality reports.
+They consists of all (or most) possible outputs of the package which are organized either by variable (`dataMaid`, `dlookr`) or by type of variable (`DataExplorer`).
+`autoEDA` package generates a minimal report with bivariate plots.
+Packages `arsenal`, `funModeling` and `xray` have an option of saving outputs to files.
 
 # Summary
 
@@ -209,4 +258,7 @@ cross_plot z funModeling robi się umiarkowanie czytelny przy nawet średniej li
 
 
 ## Weaknesses 
+
+
+These tools are usually not robust to issues like zero-variance/constant variables (`dataExplorer` can't generate a report in this case).
 
