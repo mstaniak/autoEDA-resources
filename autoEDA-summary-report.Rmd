@@ -61,12 +61,13 @@ EDA tools have multiple possible goals and most of the tools only try to address
 
 # Overview of R Tools for autoEDA
 
+In this section, eight R packages are shortly summarized.
+One of them is only available on GitHub (`autoEDA`), the rest is on CRAN.
+The list is not exhaustive, but these are the most matured general-purpose packages. 
+Other libraries exist, for example `RBioPlot` which was written specifically for molecular biology data.
 
-## Packages
 
-In this section, all packages are shortly summarized. 
-
-### dataMaid
+## dataMaid
 
 The `dataMaid` package has two central functions: the `check` function, which performs checks of data consistency and validity, and `makeDataReport`, which automatically creates a report (in PDF, DOCX or HTML format) . 
 The goal is to detect unsual (outliers, anomalies, incorretly encoded) and missing values.
@@ -74,7 +75,7 @@ The report contains whole dataset summary (variables and their types, number of 
 It is possible to manually define new checks and summaries.
 
 
-### xray
+## xray
 
 The `xray` package offers three functions for the analysis of data prior to statistical modeling:
 
@@ -84,7 +85,7 @@ The `xray` package offers three functions for the analysis of data prior to stat
 Plots can be saved to png images.  
 
 
-### visdat
+## visdat
 
 The package `visdat` is maintained by rOpenSci. It consist of 6 functions that help visualize:
 
@@ -97,7 +98,7 @@ The package `visdat` is maintained by rOpenSci. It consist of 6 functions that h
 Each of these functions returns a single `ggplot2` plot that shows a rectangular representation of the dataset. 
 
 
-### dlookr
+## dlookr
 
 The `dlookr` package provides tools for 3 types of analysis: data diagnosis (correctness, missing values and outliers detection), exploratory data analysis, feature engineering (imputation, dychotomization, transformation of continuous features).
 It can also automatically generate a pdf report for all these analyses.
@@ -114,7 +115,7 @@ If target variable is specified, plots that show relationship between the target
 Transformation reports compare descriptive statistics and plots for each variable before and after imputation, skewness-removing transformation and binning.
 
 
-### DataExplorer
+## DataExplorer
 
 `DataExplorer` is a new package that helps automatize EDA and simple feature engineering.
 It can also generate a report with data summaries.
@@ -134,7 +135,7 @@ The automatic report can be customized.
 By default, it consists of all the above points except feature engineering.
 
 
-### funModeling
+## funModeling
 
 The package `funModeling` is a reach set of tools for EDA connected to the book Data Science Live Book -Open Source- (2017).
 These tools include 
@@ -150,13 +151,13 @@ These tools include
   - gain and lift curves.
 
 
-### autoEDA
+## autoEDA
 
 `autoEDA` package is a GitHub-based tool for univariate and bivariate visualizations.
 It can also generate a pdf report with the plots of distributions of predictors grouped by outcome variable or distribution of outcome by predictors.
 
 
-### arsenal
+## arsenal
 
 The `arsenal` package is a set of 5 tools for data exploration:
 

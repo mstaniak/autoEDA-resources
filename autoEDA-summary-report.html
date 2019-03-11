@@ -265,15 +265,13 @@ div.tocify {
 </div>
 <div id="overview-of-r-tools-for-autoeda" class="section level1">
 <h1><span class="header-section-number">3</span> Overview of R Tools for autoEDA</h1>
-<div id="packages" class="section level2">
-<h2><span class="header-section-number">3.1</span> Packages</h2>
-<p>In this section, all packages are shortly summarized.</p>
-<div id="datamaid" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> dataMaid</h3>
+<p>In this section, eight R packages are shortly summarized. One of them is only available on GitHub (<code>autoEDA</code>), the rest is on CRAN. The list is not exhaustive, but these are the most matured general-purpose packages. Other libraries exist, for example <code>RBioPlot</code> which was written specifically for molecular biology data.</p>
+<div id="datamaid" class="section level2">
+<h2><span class="header-section-number">3.1</span> dataMaid</h2>
 <p>The <code>dataMaid</code> package has two central functions: the <code>check</code> function, which performs checks of data consistency and validity, and <code>makeDataReport</code>, which automatically creates a report (in PDF, DOCX or HTML format) . The goal is to detect unsual (outliers, anomalies, incorretly encoded) and missing values. The report contains whole dataset summary (variables and their types, number of missing values and if a problem was detected) and summaries (plot of the distribution and some descriptive statistic) for each variable separately. It is possible to manually define new checks and summaries.</p>
 </div>
-<div id="xray" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> xray</h3>
+<div id="xray" class="section level2">
+<h2><span class="header-section-number">3.2</span> xray</h2>
 <p>The <code>xray</code> package offers three functions for the analysis of data prior to statistical modeling:</p>
 <ul>
 <li>detecting anomalies (missing data, zero values, blank strings and infinite numbers),</li>
@@ -281,8 +279,8 @@ div.tocify {
 <li>drawing plots of variables over time (for a specified time variable). Plots can be saved to png images.</li>
 </ul>
 </div>
-<div id="visdat" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> visdat</h3>
+<div id="visdat" class="section level2">
+<h2><span class="header-section-number">3.3</span> visdat</h2>
 <p>The package <code>visdat</code> is maintained by rOpenSci. It consist of 6 functions that help visualize:</p>
 <ul>
 <li>variables types and missing data,</li>
@@ -293,15 +291,15 @@ div.tocify {
 <li>correlation matrix for the numerical variables. Each of these functions returns a single <code>ggplot2</code> plot that shows a rectangular representation of the dataset.</li>
 </ul>
 </div>
-<div id="dlookr" class="section level3">
-<h3><span class="header-section-number">3.1.4</span> dlookr</h3>
+<div id="dlookr" class="section level2">
+<h2><span class="header-section-number">3.4</span> dlookr</h2>
 <p>The <code>dlookr</code> package provides tools for 3 types of analysis: data diagnosis (correctness, missing values and outliers detection), exploratory data analysis, feature engineering (imputation, dychotomization, transformation of continuous features). It can also automatically generate a pdf report for all these analyses.</p>
 <p>For data diagnosis, types of variables are reported along with counts of missing values and and unique values. Variables with low proportion of unique values are described separately. All the typical descriptive statistics are provided for each variable. Outliers are detected and distributions of variables before and after outlier removal are plotted.</p>
 <p>In EDA report, descriptive statistics are presented along with normality tests and histogram of variables and their transformation that reduce skewness (logarithm and root square). Correlation plots are shown for numerical variables. If target variable is specified, plots that show relationship between the target and each predictor are also included.</p>
 <p>Transformation reports compare descriptive statistics and plots for each variable before and after imputation, skewness-removing transformation and binning.</p>
 </div>
-<div id="dataexplorer" class="section level3">
-<h3><span class="header-section-number">3.1.5</span> DataExplorer</h3>
+<div id="dataexplorer" class="section level2">
+<h2><span class="header-section-number">3.5</span> DataExplorer</h2>
 <p><code>DataExplorer</code> is a new package that helps automatize EDA and simple feature engineering. It can also generate a report with data summaries. It has functions for:</p>
 <ul>
 <li>whole dataset summary (dimensions, types of variables, missing values etc),</li>
@@ -316,8 +314,8 @@ div.tocify {
 <li>creating dummy variables and dropping features. The automatic report can be customized. By default, it consists of all the above points except feature engineering.</li>
 </ul>
 </div>
-<div id="funmodeling" class="section level3">
-<h3><span class="header-section-number">3.1.6</span> funModeling</h3>
+<div id="funmodeling" class="section level2">
+<h2><span class="header-section-number">3.6</span> funModeling</h2>
 <p>The package <code>funModeling</code> is a reach set of tools for EDA connected to the book Data Science Live Book -Open Source- (2017). These tools include</p>
 <ul>
 <li>dataset summary,</li>
@@ -331,12 +329,12 @@ div.tocify {
 <li>gain and lift curves.</li>
 </ul>
 </div>
-<div id="autoeda" class="section level3">
-<h3><span class="header-section-number">3.1.7</span> autoEDA</h3>
+<div id="autoeda" class="section level2">
+<h2><span class="header-section-number">3.7</span> autoEDA</h2>
 <p><code>autoEDA</code> package is a GitHub-based tool for univariate and bivariate visualizations. It can also generate a pdf report with the plots of distributions of predictors grouped by outcome variable or distribution of outcome by predictors.</p>
 </div>
-<div id="arsenal" class="section level3">
-<h3><span class="header-section-number">3.1.8</span> arsenal</h3>
+<div id="arsenal" class="section level2">
+<h2><span class="header-section-number">3.8</span> arsenal</h2>
 <p>The <code>arsenal</code> package is a set of 5 tools for data exploration:</p>
 <ul>
 <li>descriptive statistics by levels of a target variable (like Table 1), also for paired observation (for example longitudinal data),</li>
@@ -344,7 +342,6 @@ div.tocify {
 <li>frequency tables for multiple categorical variables,</li>
 <li>fitting and summarizing simple statistical models (linear regression, Cox model etc). Results of each function can be saved to a short report.</li>
 </ul>
-</div>
 </div>
 </div>
 <div id="feature-comparison" class="section level1">
