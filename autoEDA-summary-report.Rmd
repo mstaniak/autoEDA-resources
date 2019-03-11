@@ -3,12 +3,14 @@ title: "Automatic Exploratory Data Analysis Tools in R - an Overview"
 author: "Mateusz Staniak"
 date: "`r format(Sys.time(), '%d - %m - %Y')`"
 output:
+  pdf_document:
+    toc: yes
   html_document:
-    df_print: paged
-    toc: true
-    toc_float: true
     code_folding: hide
-    number_sections: true
+    df_print: paged
+    number_sections: yes
+    toc: yes
+    toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
