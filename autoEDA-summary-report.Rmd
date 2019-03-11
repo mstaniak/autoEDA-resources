@@ -31,6 +31,10 @@ library(kableExtra)
 load("usecase/data/recid.rda")
 
 recid_small <- select(recid, is_recid, age, race, priors_count)
+
+library(readr)
+comparison_table <- read_delim("comparison_table.csv", 
+                               ";", escape_double = FALSE, trim_ws = TRUE)
 ```
 
 
@@ -168,6 +172,16 @@ Results of each function can be saved to a short report.
 # Feature Comparison
 
 In this section, I will compare how different packages address autoEDA tasks.
+For a quick overview of package features, see the table below.
+
+```{r }
+comparison_table %>%
+  rename(task = X1, feature = X2) %>%
+  mutate_if(is.numeric, function(x) ifelse(x == 1, "x", "")) %>%
+knitr::kable() %>%
+  kable_styling(full_width = F)
+```
+
 
 ##  Whole dataset summaries
 
@@ -206,7 +220,7 @@ For categorical variables, counts are reported and bar plots are presented, whil
 
 In `dataMaid` and `dlookr` packagas, these plots are presented variable-by-variable in the report.
 In other packages (`dataExplorer`, `funModeling`) groups of plots are shown together (wall of histograms, wall of  barplots).
-Notably, the `dlookr` reports skewness of variables and shows the distribution after some candidate transformations to reduce the the skewness.
+Notably, the `dlookr` reports skewness of variables and in case a skewed variables is found,it  shows the distribution after some candidate transformations to reduce the skewness.
 This package also reports normality.
 
   
@@ -265,7 +279,6 @@ They consists of all (or most) possible outputs of the package which are organiz
 `autoEDA` package generates a minimal report with bivariate plots.
 Example reports from these packages can be found in the `usecase/` directory.
 Packages `arsenal`, `funModeling` and `xray` have an option of saving outputs to files.
-
 
 
 # Summary
