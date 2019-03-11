@@ -15,6 +15,19 @@ output:
 knitr::opts_chunk$set(echo = TRUE,
                       warning = FALSE,
                       message = FALSE)
+library(DataExplorer)
+library(funModeling)
+library(visdat)
+library(vtreat)
+library(dlookr)
+library(dataMaid)
+library(autoEDA)
+library(dplyr)
+library(mlr)
+library(ggplot2)
+library(xray)
+
+load("usecase/data/recid.rda")
 ```
 
 
@@ -22,34 +35,145 @@ knitr::opts_chunk$set(echo = TRUE,
 
 With autoML tools like h2o Driverless AI or autoKeras, building predictive models is becoming easier and faster. 
 But the first step in every Data Science project is understanding the particular dataset and the patterns that can be found inside it.
-We call it Exploratory Data Analysis.
-In this report I will summarise the existing R tools for automatic or fast EDA.
+It usually reffered to as Exploratory Data Analysis.
+This report is a summary of the existing R tools for automatic (or fast) EDA.
 
 TODO: glebszy wstep
 
 # Automatic EDA Tasks
 
-EDA tools have multiple possible goals and most of the tools only try to address some of them.
+EDA tools have multiple possible goals and most of the tools only try to address only some of them.
 
 TODO: rozbudowac ten akapit
 
   - Whole dataset summaries: provide information about sample size, number of variable and their types, possibly relationships between several datasets and meta-data such amount of disk space used.
   - Data validity: perform checks related to missing data and atypical values.
   - Univariate summaries: depends on variable type. For numerical variables, usually typical descriptive statistics such as centrality and dispersion measures, for categorical data, unique levels and associated counts.
-  - Bivariate summaries: present simple relationships, either between one variable of interest and all other variables (contigency tables, scatter plots, survival curves, plots of distribution (boxplots, histograms, bar plots) by values of a variable) or all pairs of variables (correlation matrices and plots).
+  - Bivariate summaries: present simple relationships, either between one variable of interest and all other variables (contigency tables, scatter plots, survival curves, plots of distribution (boxplots, histograms, bar plots) by values of a variable), all pairs of variables (correlation matrices and plots) or chosen pairs of variables.
   - Feature engineering: make variables more suitable for modeling. This includes PCA and other dimension reduction techniques, merging levels of categorical variables, transforming numerical variables (for example Box-Cox transformation).
-  - Data visualization: finding visual insight in the data.
+  - Data visualization: finding visual insight in the data. This task is particularly challenging when the dataset is high dimensional.
+  - Quick reporting: create a report based on the above points.
 
 # Overview of R Tools for autoEDA
 
 
-## CRAN packages
+## Packages
+
+In this section, all packages are shortly summarized. 
+
+### dataMaid
+
+The `dataMaid` package has two central functions: the `check` function, which performs checks of data consistency and validity, and `makeDataReport`, which automatically creates a report (in PDF, DOCX or HTML format) . 
+The goal is to detect unsual (outliers, anomalies, incorretly encoded) and missing values.
+The report contains whole dataset summary (variables and their types, number of missing values and if a problem was detected) and summaries (plot of the distribution and some descriptive statistic) for each variable separately.
+It is possible to manually define new checks and summaries.
 
 
-## GitHub packages
+### xray
+
+The `xray` package offers three functions for the analysis of data prior to statistical modeling:
+
+  - detecting anomalies (missing data, zero values, blank strings and infinite numbers),
+  - drawing (through histograms and barplots) and printing (through quantile tables) univariate distributions of each variable,
+  - drawing plots of variables over time (for a specified time variable).
+Plots can be saved to png images.  
+
+
+### visdat
+
+The package `visdat` is maintained by rOpenSci. It consist of 6 functions that help visualize:
+
+  - variables types and missing data,
+  - types of each value in each column,
+  - clusters of missing values,
+  - differences between two datasets,
+  - where given conditions are satisfied in the data,
+  - correlation matrix for the numerical variables.
+Each of these functions returns a single `ggplot2` plot that shows a rectangular representation of the dataset. 
+
+
+### dlookr
+
+The `dlookr` package provides tools for 3 types of analysis: data diagnosis (correctness, missing values and outliers detection), exploratory data analysis, feature engineering (imputation, dychotomization, transformation of continuous features).
+It can also automatically generate a pdf report for all these analyses.
+
+For data diagnosis, types of variables are reported along with counts of missing values and and unique values.
+Variables with low proportion of unique values are described separately.
+All the typical descriptive statistics are provided for each variable.
+Outliers are detected and distributions of variables before and after outlier removal are plotted.
+
+In EDA report, descriptive statistics are presented along with normality tests and histogram of variables and their transformation that reduce skewness (logarithm and root square).
+Correlation plots are shown for numerical variables. 
+If target variable is specified, plots that show relationship between the target and each predictor are also included.
+
+Transformation reports compare descriptive statistics and plots for each variable before and after imputation, skewness-removing transformation and binning.
+
+
+### DataExplorer
+
+`DataExplorer` is a new package that helps automatize EDA and simple feature engineering.
+It can also generate a report with data summaries.
+It has functions for:
+
+  - whole dataset summary (dimensions, types of variables, missing values etc),
+  - missing values visualization (percentage of missigness in each column),
+  - plotting distributions of variables (numerical and categorical variables separately),
+  - QQ Plots,
+  - plotting correlation matrices,
+  - visualizing PCA results,
+  - plotting relationships between target variable and predictors (scatterplots and boxplots),
+  - replacing missing values by a constant,
+  - grouping sparse categories,
+  - creating dummy variables and dropping features.
+The automatic report can be customized. 
+By default, it consists of all the above points except feature engineering.
+
+
+### funModeling
+
+The package `funModeling` is a reach set of tools for EDA connected to the book Data Science Live Book -Open Source- (2017).
+These tools include 
+
+  - dataset summary, 
+  - plots and descriptive statistics for categorical and numerical variables, 
+  - correlation analysis (classical and based on information theory),
+  - plots of distribution of target variables vs predictors (bar plots, boxplots, histograms),
+  - quantitative analysis for binary target variables,
+  - different methods of discretization,
+  - variable scaling,
+  - outlier treatment,
+  - gain and lift curves.
+
+
+### autoEDA
+
+`autoEDA` package is a GitHub-based tool for univariate and bivariate visualizations.
+It can also generate a pdf report with the plots of distributions of predictors grouped by outcome variable or distribution of outcome by predictors.
+
+
+### arsenal
+
+The `arsenal` package is a set of 5 tools for data exploration:
+
+  - descriptive statistics by levels of a target variable (like Table 1), also for paired observation (for example longitudinal data),
+  - comparing data frames,
+  - frequency tables for multiple categorical variables,
+  - fitting and summarizing simple statistical models (linear regression, Cox model etc).
+Results of each function can be saved to a short report.
+
+
+<!-- ## GitHub packages -->
 
 
 # Summary
+
+Wnioski z prac studentów:
+
+visdat lepiej niż dataexplorer rysuje wykresy korelacji (rozpoznawanie typów),
+dataexplorer daje za mało opcji dla corrplota (nie da się zrobić hclust),
+umieszczanie wielu zmiennych w jednym panelu przez dataexplorer obniża czytelność,
+dataexplorer słusznie robi, odrzucając zbyt duże faktory,
+cross_plot z funModeling robi się umiarkowanie czytelny przy nawet średniej liczbie poziomów faktora i nie sortuje w żaden sposób poziomów,
 
 
 ## Strengths 
