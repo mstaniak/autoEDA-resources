@@ -45,13 +45,9 @@ But the first step in every Data Science project is understanding the particular
 It usually reffered to as Exploratory Data Analysis.
 This report is a summary of the existing R tools for automatic (or fast) EDA.
 
-TODO: glebszy wstep
-
 # Automatic EDA Tasks
 
 EDA tools have multiple possible goals and most of the tools only try to address only some of them.
-
-TODO: rozbudowac ten akapit
 
   - Whole dataset summaries: provide information about sample size, number of variable and their types, possibly relationships between several datasets and meta-data such amount of disk space used.
   - Data validity: perform checks related to missing data and atypical values.
@@ -283,20 +279,32 @@ Packages `arsenal`, `funModeling` and `xray` have an option of saving outputs to
 
 # Summary
 
-Wnioski z prac studentów:
-
-visdat lepiej niż dataexplorer rysuje wykresy korelacji (rozpoznawanie typów),
-dataexplorer daje za mało opcji dla corrplota (nie da się zrobić hclust),
-umieszczanie wielu zmiennych w jednym panelu przez dataexplorer obniża czytelność,
-dataexplorer słusznie robi, odrzucając zbyt duże faktory,
-cross_plot z funModeling robi się umiarkowanie czytelny przy nawet średniej liczbie poziomów faktora i nie sortuje w żaden sposób poziomów,
+Undoubtely, the presented have many advantages.
+Still, there are many open problems related to automated data exploration that could vastly improve them. 
 
 
 ## Strengths 
 
+  * The packages `dlookr`, `dataMaid` and `DataExplorer` are capable of creating good quality reports.
+  * `DataExplorer` has very good visualizations for PCA.
+  * `DataExplorer` handles categorical variables on correlation plots by creating dummy features, which is a unique idea compared to other packages.
+  * The `visdat` package, while probably not the best choice for high dimensional data, features interesting take on initial whole dataset exploration.
+  * The `dlookr` package is capable of selecting skewed variable and proposing transformations.
+  * `dataMaid` is a good tool for finding problems in the data.
+  * For datasets with a moderate number of features, `DataExplorer`, `funModeling` and `dlookr` give a reasonable insight into variables stributions and simple relationships.
 
-## Weaknesses 
 
+## Weaknesses
 
-These tools are usually not robust to issues like zero-variance/constant variables (`dataExplorer` can't generate a report in this case).
+  * All the presented tools are likely to fail in typical situations with imperfect data. In particular, they are usually not robust to issues like zero-variance/constant variables (`dataExplorer` can't generate a report in this case). Error messages in some cases not uninformative.
+  * In some situations, they lack flexibility. For example, in `DataExplorer` arguments can be passed to `cor` function, but not to `corrplot` function.
+  * In case of _walls_ of histograms or barplots, no selection is being done and no specific order is chosen to promote most interesting distributions. Moreover, for high-dimensional data or high-cardinality factors the plots are unreadable or impractical. This is especially true for `DataExplorer` and `funModeling` functions (e.g. `cross_plot`), even though `DataExplorer` removes too large factors from the panels.
+  * Plots are limited to bivariate relationships, when exploring higher dimensional dependencies would be interesting (for example through colors and sizes).
+  * Support for time-varying variables and non-classical (not IID) problems such as survival analysis is limited or non-existent. 
+  * Automated reports could be enriched by textual annotations and descriptions, either built from a simple template or from a generative model.
+  * Only one of the packages addresses the issue of skewed variables. Proposing transformations of continuous features (other than binning) could be also useful.
+  * Exploration based on simple statistical models (for example scatter plot smoothing) is not an option in any of the packages.
+  * None of the packages addresses issues such a multicolinearity.
+  * Missing data imputation more advanced than imputing a constant is delegated to other variables.
+  * Some of the above issues (lack of recommendations, not performing imputation or other transformation) result in the packages being not suitable for iterative work.
 

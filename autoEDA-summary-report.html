@@ -249,12 +249,10 @@ div.tocify {
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
 <p>With autoML tools like h2o Driverless AI or autoKeras, building predictive models is becoming easier and faster. But the first step in every Data Science project is understanding the particular dataset and the patterns that can be found inside it. It usually reffered to as Exploratory Data Analysis. This report is a summary of the existing R tools for automatic (or fast) EDA.</p>
-<p>TODO: glebszy wstep</p>
 </div>
 <div id="automatic-eda-tasks" class="section level1">
 <h1><span class="header-section-number">2</span> Automatic EDA Tasks</h1>
 <p>EDA tools have multiple possible goals and most of the tools only try to address only some of them.</p>
-<p>TODO: rozbudowac ten akapit</p>
 <ul>
 <li>Whole dataset summaries: provide information about sample size, number of variable and their types, possibly relationships between several datasets and meta-data such amount of disk space used.</li>
 <li>Data validity: perform checks related to missing data and atypical values.</li>
@@ -1470,14 +1468,34 @@ Asian
 </div>
 <div id="summary" class="section level1">
 <h1><span class="header-section-number">5</span> Summary</h1>
-<p>Wnioski z prac studentów:</p>
-<p>visdat lepiej niż dataexplorer rysuje wykresy korelacji (rozpoznawanie typów), dataexplorer daje za mało opcji dla corrplota (nie da się zrobić hclust), umieszczanie wielu zmiennych w jednym panelu przez dataexplorer obniża czytelność, dataexplorer słusznie robi, odrzucając zbyt duże faktory, cross_plot z funModeling robi się umiarkowanie czytelny przy nawet średniej liczbie poziomów faktora i nie sortuje w żaden sposób poziomów,</p>
+<p>Undoubtely, the presented have many advantages. Still, there are many open problems related to automated data exploration that could vastly improve them.</p>
 <div id="strengths" class="section level2">
 <h2><span class="header-section-number">5.1</span> Strengths</h2>
+<ul>
+<li>The packages <code>dlookr</code>, <code>dataMaid</code> and <code>DataExplorer</code> are capable of creating good quality reports.</li>
+<li><code>DataExplorer</code> has very good visualizations for PCA.</li>
+<li><code>DataExplorer</code> handles categorical variables on correlation plots by creating dummy features, which is a unique idea compared to other packages.</li>
+<li>The <code>visdat</code> package, while probably not the best choice for high dimensional data, features interesting take on initial whole dataset exploration.</li>
+<li>The <code>dlookr</code> package is capable of selecting skewed variable and proposing transformations.</li>
+<li><code>dataMaid</code> is a good tool for finding problems in the data.</li>
+<li>For datasets with a moderate number of features, <code>DataExplorer</code>, <code>funModeling</code> and <code>dlookr</code> give a reasonable insight into variables stributions and simple relationships.</li>
+</ul>
 </div>
 <div id="weaknesses" class="section level2">
 <h2><span class="header-section-number">5.2</span> Weaknesses</h2>
-<p>These tools are usually not robust to issues like zero-variance/constant variables (<code>dataExplorer</code> can’t generate a report in this case).</p>
+<ul>
+<li>All the presented tools are likely to fail in typical situations with imperfect data. In particular, they are usually not robust to issues like zero-variance/constant variables (<code>dataExplorer</code> can’t generate a report in this case). Error messages in some cases not uninformative.</li>
+<li>In some situations, they lack flexibility. For example, in <code>DataExplorer</code> arguments can be passed to <code>cor</code> function, but not to <code>corrplot</code> function.</li>
+<li>In case of <em>walls</em> of histograms or barplots, no selection is being done and no specific order is chosen to promote most interesting distributions. Moreover, for high-dimensional data or high-cardinality factors the plots are unreadable or impractical. This is especially true for <code>DataExplorer</code> and <code>funModeling</code> functions (e.g. <code>cross_plot</code>), even though <code>DataExplorer</code> removes too large factors from the panels.</li>
+<li>Plots are limited to bivariate relationships, when exploring higher dimensional dependencies would be interesting (for example through colors and sizes).</li>
+<li>Support for time-varying variables and non-classical (not IID) problems such as survival analysis is limited or non-existent.</li>
+<li>Automated reports could be enriched by textual annotations and descriptions, either built from a simple template or from a generative model.</li>
+<li>Only one of the packages addresses the issue of skewed variables. Proposing transformations of continuous features (other than binning) could be also useful.</li>
+<li>Exploration based on simple statistical models (for example scatter plot smoothing) is not an option in any of the packages.</li>
+<li>None of the packages addresses issues such a multicolinearity.</li>
+<li>Missing data imputation more advanced than imputing a constant is delegated to other variables.</li>
+<li>Some of the above issues (lack of recommendations, not performing imputation or other transformation) result in the packages being not suitable for iterative work.</li>
+</ul>
 </div>
 </div>
 
