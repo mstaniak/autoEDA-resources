@@ -162,8 +162,37 @@ The `arsenal` package is a set of 5 tools for data exploration:
 Results of each function can be saved to a short report.
 
 
-<!-- ## GitHub packages -->
+# Feature Comparison
 
+##  Whole dataset summaries
+
+`visdat` package offers most original summaries of full dataset. 
+
+```{r }
+visdat::vis_dat(recid)
+```
+
+The drawback of this approach is that it is not well suited for high dimensional data.
+But for smaller number of variables, it gives a good overview of the dataset.
+
+Most packages that provide a whole dataset summary take a similar approach and present names and types of variables, number of missing values and sometimes unique values or other statistics. This is true for `autoEDA` (`dataOverview` function), `dataMaid` (`makeDataReport` result), `funModeling` (`df_status` function)  and `DataExplorer` (`introduce` function), which provides the information separately on two plots - one for dataset structure, one for missing data. The `dlookr` package provides summaries for numerical variables and categorical variables are presented only in the report, separately (`describe` function).
+
+
+## Data validity
+
+Some package offer automated checks for the data. 
+This include at least outlier detection. 
+The `dataMaid` package's main purpose is to 
+
+## Univariate summaries
+  
+## Bivariate summaries
+  
+## Feature engineering 
+
+## Data visualization
+
+## Quick reporting
 
 # Summary
 
