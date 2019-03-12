@@ -3,14 +3,14 @@ title: "Automatic Exploratory Data Analysis Tools in R - an Overview"
 author: "Mateusz Staniak"
 date: "`r format(Sys.time(), '%d - %m - %Y')`"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     code_folding: hide
     df_print: paged
     number_sections: yes
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -78,9 +78,11 @@ The report contains whole dataset summary (variables and their types, number of 
 
 `dataMaid` is on [CRAN](https://cran.r-project.org/package=dataMaid). 
 A [vignette](https://cran.r-project.org/web/packages/dataMaid/vignettes/extending_dataMaid.html) explains how to manually define new checks and summaries.
+The R output below is an example of `dataMaid` summary and checks.
 
-```{r fig.cap = "Example dataMaid output"}
+```{r }
 dataMaid::summarize(select(recid_small, age, race))
+dataMaid::check(select(recid_small, age, race))
 ```
 
 ## xray
@@ -96,7 +98,8 @@ The package can be found on [CRAN](https://cran.r-project.org/package=xray).
 Examples are presented in the [GitHub readme](https://github.com/sicarul/xray).
 
 ```{r , fig.cap = "Example xray output"}
-xray::distributions(recid_small, charts = T)
+xray::distributions(recid_small, charts = T) %>%
+  kable()
 ```
 
 ## visdat
@@ -135,9 +138,9 @@ Transformation report compares descriptive statistics and plots for each variabl
 
 The package in on [CRAN](https://cran.r-project.org/package=dlookr) and a dedicated vignette explains each of the main functionalities.
 
-```{r , fig.cap = "Example dlookr output."}
+```{r }
 dlookr::diagnose(recid) %>%
-  kable() %>%
+  kable(caption = "Example dlookr output (truncated).") %>%
   kable_styling(full_width = FALSE)
 ```
 
@@ -194,11 +197,11 @@ It can also generate a pdf report with the plots of distributions of predictors 
 
 The package can be found on [Xander Horn's GitHub](https://github.com/XanderHorn/autoEDA) and a short article is on [LinkedIn](https://www.linkedin.com/pulse/automated-exploratory-data-analysis-r-xander-horn/).
 
-```{r , fig.cap = "Example autoEDA output (truncated)."}
+```{r }
 autoeda_tbl <- autoEDA::dataOverview(recid_small)
 colnames(autoeda_tbl) <- stringr::str_trunc(colnames(autoeda_tbl), 10, ellipsis = "")
 
-kable(autoeda_tbl[, 1:7]) %>%
+kable(autoeda_tbl[, 1:7], caption = "Example autoEDA output (truncated).") %>%
   kable_styling(full_width = F)
 ```
 
@@ -215,9 +218,9 @@ Results of each function can be saved to a short report.
 
 `arsenal` is on [CRAN](https://cran.r-project.org/web/packages/arsenal/index.html) and includes a vignette for each of the functions.
 
-```{r , fig.cap = "Example arsenal output."}
+```{r }
 summary(arsenal::tableby(is_recid ~., data = recid_small)) %>%
-  kable() %>%
+  kable(caption = "Example arsenal output.") %>%
   kable_styling(full_width = FALSE)
 ```
 
