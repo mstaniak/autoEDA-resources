@@ -16,7 +16,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       warning = FALSE,
-                      message = FALSE)
+                      message = FALSE,
+                      cache = TRUE)
 library(DataExplorer)
 library(funModeling)
 library(visdat)
@@ -74,8 +75,13 @@ Other libraries exist, for example, `RBioPlot` which was written specifically fo
 The `dataMaid` package has two central functions: the `check` function, which performs checks of data consistency and validity, and `makeDataReport`, which automatically creates a report (in PDF, DOCX or HTML format). 
 The goal is to detect unusual (outliers, anomalies, incorrectly encoded) and missing values.
 The report contains whole dataset summary (variables and their types, number of missing values and if a problem was detected) and summaries (plot of the distribution and some descriptive statistic) for each variable separately.
-It is possible to manually define new checks and summaries.
 
+`dataMaid` is on [CRAN](https://cran.r-project.org/package=dataMaid). 
+A [vignette](https://cran.r-project.org/web/packages/dataMaid/vignettes/extending_dataMaid.html) explains how to manually define new checks and summaries.
+
+```{r fig.cap = "Example dataMaid output"}
+dataMaid::summarize(select(recid_small, age, race))
+```
 
 ## xray
 
@@ -86,6 +92,12 @@ The `xray` package offers three functions for the analysis of data prior to stat
   - drawing plots of variables over time (for a specified time variable).
 Plots can be saved to png images.  
 
+The package can be found on [CRAN](https://cran.r-project.org/package=xray). 
+Examples are presented in the [GitHub readme](https://github.com/sicarul/xray).
+
+```{r , fig.cap = "Example xray output"}
+xray::distributions(recid_small, charts = T)
+```
 
 ## visdat
 
@@ -99,6 +111,11 @@ The package `visdat` is maintained by rOpenSci. It consists of 6 functions that 
   - correlation matrix for the numerical variables.
 Each of these functions returns a single `ggplot2` plot that shows a rectangular representation of the dataset. 
 
+`visdat` is on [CRAN](https://cran.r-project.org/package=visdat). Example can be found in the [vignette](https://cran.mtu.edu/web/packages/visdat/vignettes/using_visdat.html).
+
+```{r , fig.cap = "Example visdat output."}
+visdat::vis_guess(recid_small)
+```
 
 ## dlookr
 
@@ -116,6 +133,13 @@ If the target variable is specified, plots that show the relationship between th
 
 Transformation report compares descriptive statistics and plots for each variable before and after imputation, skewness-removing transformation and binning.
 
+The package in on [CRAN](https://cran.r-project.org/package=dlookr) and a dedicated vignette explains each of the main functionalities.
+
+```{r , fig.cap = "Example dlookr output."}
+dlookr::diagnose(recid) %>%
+  kable() %>%
+  kable_styling(full_width = FALSE)
+```
 
 ## DataExplorer
 
@@ -136,6 +160,11 @@ It has functions for:
 The automatic report can be customized. 
 By default, it consists of all the above points except for feature engineering.
 
+This package is on [CRAN](https://cran.r-project.org/package=DataExplorer) where a introductory [vignette](https://cran.r-project.org/web/packages/DataExplorer/vignettes/dataexplorer-intro.html) can be found.
+
+```{r , fig.cap = "Example DataExplorer output."}
+plot_bar(recid)
+```
 
 ## funModeling
 
@@ -151,12 +180,27 @@ These tools include
   - variable scaling,
   - outlier treatment,
   - gain and lift curves.
+  
+The package is on [CRAN](https://cran.r-project.org/package=funModeling) and has an exhaustive [introduction vignette](https://cran.r-project.org/web/packages/funModeling/vignettes/funModeling_quickstart.html).
 
+```{r , fig.cap = "Example funModeling output."}
+funModeling::cross_plot(recid_small, "race", "is_recid")
+```
 
 ## autoEDA
 
 `autoEDA` package is a GitHub-based tool for univariate and bivariate visualizations.
 It can also generate a pdf report with the plots of distributions of predictors grouped by outcome variable or distribution of outcome by predictors.
+
+The package can be found on [Xander Horn's GitHub](https://github.com/XanderHorn/autoEDA) and a short article is on [LinkedIn](https://www.linkedin.com/pulse/automated-exploratory-data-analysis-r-xander-horn/).
+
+```{r , fig.cap = "Example autoEDA output (truncated)."}
+autoeda_tbl <- autoEDA::dataOverview(recid_small)
+colnames(autoeda_tbl) <- stringr::str_trunc(colnames(autoeda_tbl), 10, ellipsis = "")
+
+kable(autoeda_tbl[, 1:7]) %>%
+  kable_styling(full_width = F)
+```
 
 
 ## arsenal
@@ -169,6 +213,13 @@ The `arsenal` package is a set of 5 tools for data exploration:
   - fitting and summarizing simple statistical models (linear regression, Cox model etc).
 Results of each function can be saved to a short report.
 
+`arsenal` is on [CRAN](https://cran.r-project.org/web/packages/arsenal/index.html) and includes a vignette for each of the functions.
+
+```{r , fig.cap = "Example arsenal output."}
+summary(arsenal::tableby(is_recid ~., data = recid_small)) %>%
+  kable() %>%
+  kable_styling(full_width = FALSE)
+```
 
 # Feature Comparison
 
