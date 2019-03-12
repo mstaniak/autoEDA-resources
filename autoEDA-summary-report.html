@@ -241,25 +241,25 @@ div.tocify {
 
 <h1 class="title toc-ignore">Automatic Exploratory Data Analysis Tools in R - an Overview</h1>
 <h4 class="author"><em>Mateusz Staniak</em></h4>
-<h4 class="date"><em>11 - 03 - 2019</em></h4>
+<h4 class="date"><em>12 - 03 - 2019</em></h4>
 
 </div>
 
 
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
-<p>With autoML tools like h2o Driverless AI or autoKeras, building predictive models is becoming easier and faster. But the first step in every Data Science project is understanding the particular dataset and the patterns that can be found inside it. It usually referred to as Exploratory Data Analysis. This report is a summary of the existing R tools for automatic (or fast) EDA.</p>
+<p>With autoML tools like h2o Driverless AI or autoKeras, building predictive models is becoming easier and faster. But the first step in every Data Science project is understanding the particular dataset and its patterns. It usually referred to as Exploratory Data Analysis. This part of the analysis is crucial, but also time consuming, so it is tempting to try to automate it. This report is a summary of the existing R tools for automatic (or fast) EDA.</p>
 </div>
 <div id="automatic-eda-tasks" class="section level1">
 <h1><span class="header-section-number">2</span> Automatic EDA Tasks</h1>
-<p>EDA tools have multiple possible goals and most of the tools only try to address only some of them.</p>
+<p>EDA tools have multiple possible goals and most of the tools only try to address some of them.</p>
 <ul>
 <li>Whole dataset summaries: provide information about sample size, number of variables and their types, possible relationships between several datasets and meta-data such amount of disk space used.</li>
 <li>Data validity: perform checks related to missing data and atypical values.</li>
 <li>Univariate summaries: depends on the variable type. For numerical variables, usually typical descriptive statistics such as centrality and dispersion measures, for categorical data, unique levels, and associated counts.</li>
 <li>Bivariate summaries: present simple relationships, either between one variable of interest and all other variables (contingency tables, scatter plots, survival curves, plots of distribution (boxplots, histograms, bar plots) by values of a variable), all pairs of variables (correlation matrices and plots) or chosen pairs of variables.</li>
 <li>Feature engineering: make variables more suitable for modeling. This includes PCA and other dimension reduction techniques, merging levels of categorical variables, transforming numerical variables (for example Box-Cox transformation).</li>
-<li>Data visualization: finding visual insight into the data. This task is particularly challenging when the dataset is high dimensional.</li>
+<li>Data visualization: find visual insight into the data. This task is particularly challenging when the dataset is high dimensional.</li>
 <li>Quick reporting: create a report based on the above points.</li>
 </ul>
 </div>
@@ -296,7 +296,7 @@ div.tocify {
 <p>The <code>dlookr</code> package provides tools for 3 types of analysis: data diagnosis (correctness, missing values, and outliers detection), exploratory data analysis, feature engineering (imputation, dichotomization, a transformation of continuous features). It can also automatically generate a pdf report for all these analyses.</p>
 <p>For data diagnosis, types of variables are reported along with counts of missing values and unique values. Variables with a low proportion of unique values are described separately. All the typical descriptive statistics are provided for each variable. Outliers are detected and distributions of variables before and after outlier removal are plotted.</p>
 <p>In the EDA report, descriptive statistics are presented along with normality tests and a histogram of variables and their transformation that reduce skewness (logarithm and root square). Correlation plots are shown for numerical variables. If the target variable is specified, plots that show the relationship between the target and each predictor are also included.</p>
-<p>Transformation reports compare descriptive statistics and plots for each variable before and after imputation, skewness-removing transformation and binning.</p>
+<p>Transformation report compares descriptive statistics and plots for each variable before and after imputation, skewness-removing transformation and binning.</p>
 </div>
 <div id="dataexplorer" class="section level2">
 <h2><span class="header-section-number">3.5</span> DataExplorer</h2>
@@ -311,7 +311,7 @@ div.tocify {
 <li>plotting relationships between the target variable and predictors (scatterplots and boxplots),</li>
 <li>replacing missing values by a constant,</li>
 <li>grouping sparse categories,</li>
-<li>creating dummy variables and dropping features. The automatic report can be customized. By default, it consists of all the above points except feature engineering.</li>
+<li>creating dummy variables and dropping features. The automatic report can be customized. By default, it consists of all the above points except for feature engineering.</li>
 </ul>
 </div>
 <div id="funmodeling" class="section level2">
