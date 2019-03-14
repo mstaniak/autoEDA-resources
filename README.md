@@ -11,7 +11,9 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [DataExplorer](https://github.com/boxuancui/DataExplorer) (CRAN package) - automated data exploration (including univariate and bivariate plots, PCA) and  treatment (including missing data analysis).
 
-- [funModeling](https://cran.r-project.org/web/packages/funModeling/index.html) (CRAN package) - automated EDA, simple feature engineering and outlier detection.
+- [funModeling](https://cran.r-project.org/package=funModeling) (CRAN package) - automated EDA, simple feature engineering and outlier detection.
+
+- [SmartEDA](https://cran.r-project.org/package=SmartEDA) (CRAN package) - automated generation of descriptive statistics and univariate/bivariate plots, parallel coordinate plots.
 
 - [autoEDA](https://github.com/XanderHorn/autoEDA) (GitHub package) - automated EDA with uni- and bivariate plots. An article with an introduction can be found on [LinkedIn](https://www.linkedin.com/pulse/automated-exploratory-data-analysis-r-xander-horn/).
 
