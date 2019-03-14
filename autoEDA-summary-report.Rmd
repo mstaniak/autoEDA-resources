@@ -31,7 +31,7 @@ library(ggplot2)
 library(xray)
 library(kableExtra)
 
-load("usecase/data/recid.rda")
+load("usecase/compas/data/recid.rda")
 
 recid_small <- select(recid, is_recid, age, race, priors_count)
 

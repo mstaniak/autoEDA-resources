@@ -11,3 +11,7 @@ usecase/data/propublicaCompassRecividism_data_fairml\.csv/propublica_data_for_fa
 usecase/data/propublicaCompassRecividism_data_fairml\.csv/\._propublica_data_for_fairml\.csv
 
 *.log
+
+usecase/compas/data/propublicaCompassRecividism_data_fairml\.csv/\._propublica_data_for_fairml\.csv
+
+usecase/compas/data/propublicaCompassRecividism_data_fairml\.csv/propublica_data_for_fairml\.csv
