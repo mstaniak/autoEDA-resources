@@ -47,6 +47,12 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [EDA](https://github.com/JamesDavidLawrence/EDA) - stub of a package.
 
+- [modeler](https://github.com/mattmills49/modeler) (GitHub package) - tools for exploration and pre-processing.
+
+- [IEDA](https://github.com/krupanss/IEDA) (GitHub package) - EDA simplified through interactive visualization.
+
+- [seda](https://github.com/bruno-pinheiro/seda) (GitHub package) - fast EDA tool in active development.
+
 
 ## Python libraries
 
