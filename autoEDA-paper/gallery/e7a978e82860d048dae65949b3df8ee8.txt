@@ -1,0 +1,9 @@
+# A tibble: 6 x 4
+   rows variable valueType value
+  <int> <chr>    <chr>     <chr>
+1     1 ID       character 0001 
+2     2 ID       character 0002 
+3     3 ID       character 0003 
+4     4 ID       character 0004 
+5     5 ID       character 0005 
+6     6 ID       character 0006 

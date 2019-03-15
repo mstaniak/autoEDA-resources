@@ -1,0 +1,9 @@
+# A tibble: 6 x 9
+  ID    Race     Age   Sex    Height_cm_    IQ Smokes Income   Died 
+  <chr> <fct>    <chr> <fct>       <dbl> <dbl> <lgl>  <fct>    <lgl>
+1 0001  Black    <NA>  Male         176.   110 FALSE  4334.29  FALSE
+2 0002  Black    25    Male         172.    84 TRUE   16682.37 TRUE 
+3 0003  Black    31    Female       174.   115 FALSE  50402.01 FALSE
+4 0004  Hispanic 27    Female       172.    84 FALSE  91442.86 FALSE
+5 0005  <NA>     21    Female       158.   116 FALSE  75266.05 FALSE
+6 0006  White    22    Female       170.    83 FALSE  12209.71 FALSE

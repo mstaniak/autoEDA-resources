@@ -1,0 +1,7 @@
+            Var1       Var2         value
+1     Height_cm_ Height_cm_  1.0000000000
+2             IQ Height_cm_            NA
+3     Race_Asian Height_cm_  0.0463533467
+4 Race_Bi.Racial Height_cm_  0.0030104105
+5     Race_Black Height_cm_ -0.0006139919
+6  Race_Hispanic Height_cm_ -0.0022767483

@@ -1,0 +1,7 @@
+          Var1       Var2       value
+1   Height_cm_ Height_cm_  1.00000000
+2           IQ Height_cm_          NA
+3   Sex_Female Height_cm_ -0.02972825
+4     Sex_Male Height_cm_  0.02972825
+5 Smokes_FALSE Height_cm_ -0.02447967
+6  Smokes_TRUE Height_cm_  0.02447967
