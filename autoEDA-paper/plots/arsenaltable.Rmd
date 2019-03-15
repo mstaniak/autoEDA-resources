@@ -1,0 +1,23 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+|                            | FALSE (N=465) | TRUE (N=535) | Total (N=1000) | p value|
+|:---------------------------|:-------------:|:------------:|:--------------:|-------:|
+|**Smokes**                  |               |              |                |   0.207|
+|&nbsp;&nbsp;&nbsp;FALSE     |  384 (82.6%)  | 425 (79.4%)  |  809 (80.9%)   |        |
+|&nbsp;&nbsp;&nbsp;TRUE      |  81 (17.4%)   | 110 (20.6%)  |  191 (19.1%)   |        |
+|**Race**                    |               |              |                |   0.359|
+|&nbsp;&nbsp;&nbsp;N-Miss    |      52       |      55      |      107       |        |
+|&nbsp;&nbsp;&nbsp;White     |  261 (63.2%)  | 318 (66.2%)  |  579 (64.8%)   |        |
+|&nbsp;&nbsp;&nbsp;Hispanic  |  75 (18.2%)   |  71 (14.8%)  |  146 (16.3%)   |        |
+|&nbsp;&nbsp;&nbsp;Black     |  56 (13.6%)   |  58 (12.1%)  |  114 (12.8%)   |        |
+|&nbsp;&nbsp;&nbsp;Asian     |   14 (3.4%)   |  14 (2.9%)   |   28 (3.1%)    |        |
+|&nbsp;&nbsp;&nbsp;Bi-Racial |   5 (1.2%)    |  13 (2.7%)   |   18 (2.0%)    |        |
+|&nbsp;&nbsp;&nbsp;Native    |   2 (0.5%)    |   5 (1.0%)   |    7 (0.8%)    |        |
+|&nbsp;&nbsp;&nbsp;Other     |   0 (0.0%)    |   1 (0.2%)   |    1 (0.1%)    |        |
+|&nbsp;&nbsp;&nbsp;Hawaiian  |   0 (0.0%)    |   0 (0.0%)   |    0 (0.0%)    |        |
+
