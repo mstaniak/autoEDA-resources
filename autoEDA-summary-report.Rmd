@@ -49,6 +49,7 @@ It usually referred to as Exploratory Data Analysis.
 This part of the analysis is crucial, but also time consuming, so it is tempting to try to automate it.
 This report is a summary of the existing R tools for automatic (or fast) EDA.
 
+
 # Automatic EDA Tasks
 
 EDA tools have multiple possible goals and most of the tools only try to address some of them.
