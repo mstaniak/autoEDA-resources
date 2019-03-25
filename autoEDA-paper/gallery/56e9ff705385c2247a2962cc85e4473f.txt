@@ -1,0 +1,9 @@
+# A tibble: 6 x 8
+  package      all_downloads release_date stars commits contributors issues forks
+  <chr>                <dbl> <chr>        <int>   <int>        <int>  <int> <int>
+1 DataExplorer         57502 2016-03-01     210     186            2    112    37
+2 visdat               47130 2017-07-11     258     402           11    114    31
+3 funModeling          41955 2016-02-07      52     125            2     12    15
+4 arsenal              30810 2016-12-30      33     586            3    196     2
+5 dataMaid             17330 2017-01-02      62     468            2     43    17
+6 dlookr                8228 2018-04-27      25      52            3      6    11
