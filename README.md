@@ -31,6 +31,12 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [arsenal](https://cran.r-project.org/package=arsenal) (CRAN package) - statistical summaries (models and exploration) and quick reporting.
 
+- [RtutoR](https://cran.r-project.org/package=RtutoR) (CRAN package) - learning material with a automatic reports module. More at [R-Bloggers](https://www.r-bloggers.com/automating-basic-eda/).
+
+- [exploreR](https://cran.r-project.org/package=exploreR) (CRAN package) - exploration based on univariate linear regression.
+
+- [summarytools](https://cran.r-project.org/package=summarytools) (CRAN package) - table to summarise datasets and perform simple uni- and bivariate analyses.
+
 ### Packages in Development
 
 - [AEDA](https://github.com/tuanle618/AEDA) (GitHub package) - summary statistics, correlation analysis, cluster analysis, PCA & other projections.
@@ -40,8 +46,6 @@ A list of software related to automatic Exploratory Data Analysis
 - [automatic-data-explorer](https://github.com/elastacloud/automatic-data-explorer/) (GitHub package) - basic EDA and creating Markdown reports from multiple R scripts.
 
 - [xda](https://github.com/ujjwalkarn/xda) (GitHub package) - basic data summaries.
-
-- [RtutoR](https://github.com/anup50695/RtutoR) (GitHub repo) - learning material with a automatic reports module. More at [R-Bloggers](https://www.r-bloggers.com/automating-basic-eda/).
 
 - [EDA](https://github.com/JamesDavidLawrence/EDA) - stub of a package.
 
