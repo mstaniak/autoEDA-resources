@@ -13,8 +13,15 @@ library(dlookr)
 library(summarytools)
 library(exploreR)
 library(RtutoR)
+library(readr)
 # Set up archivist repo
 # archivist::createLocalRepo(".")
+comparison_table <- read_delim("C:/Users/mstaniak/Projekty/MI2DataLab/autoEDA-resources/comparison_table.csv",
+                               ";", escape_double = FALSE, trim_ws = TRUE)
+# archivist::asave(comparison_table, ".")
+# "90591a7fb1b7679cc8d535d5c0e56ff7"
+# Export table of package features.
+xtable::xtable(dplyr::mutate_all(comparison_table, function(x) ifelse(x, "x", "")))
 # Load data from visdat package
 data('typical_data', package = 'visdat')
 head(typical_data)
