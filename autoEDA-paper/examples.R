@@ -10,6 +10,7 @@ library(SmartEDA)
 library(xray)
 library(funModeling)
 library(dlookr)
+library(summarytools)
 # Set up archivist repo
 # archivist::createLocalRepo(".")
 # Load data from visdat package
@@ -62,3 +63,7 @@ colnames(example_data) <- stringr::str_replace_all(colnames(example_data), "\\)"
 # "baaea26dc137370dbcaf42c122b4d2eb"
 SmartEDA::ExpReport(example_data, Target = "Died", op_file = "smarteda_report2.html",
                     op_dir = "./plots/SmartEDA/")
+# summarytoools example
+summarytools_uni <- summarytools::descr(example_data)
+# archivist::asave(summarytools_uni, repoDir = ".")
+# "9e12d5686918a5ad1c34c6857b0143df"
