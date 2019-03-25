@@ -9,25 +9,23 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [dataMaid](https://github.com/ekstroem/dataMaid) (CRAN package) - automated checks of data validity.
 
-- [DataExplorer](https://github.com/boxuancui/DataExplorer) (CRAN package) - automated data exploration (including univariate and bivariate plots, PCA) and  treatment (including missing data analysis).
+- [DataExplorer](https://github.com/boxuancui/DataExplorer) (CRAN package) - automated data exploration (including univariate and bivariate plots, PCA) and  treatment.
 
 - [funModeling](https://cran.r-project.org/package=funModeling) (CRAN package) - automated EDA, simple feature engineering and outlier detection.
 
-- [SmartEDA](https://cran.r-project.org/package=SmartEDA) (CRAN package) - automated generation of descriptive statistics and univariate/bivariate plots, parallel coordinate plots.
+- [SmartEDA](https://cran.r-project.org/package=SmartEDA) (CRAN package) - automated generation of descriptive statistics and uni- and bivariate plots, parallel coordinate plots.
 
 - [autoEDA](https://github.com/XanderHorn/autoEDA) (GitHub package) - automated EDA with uni- and bivariate plots. An article with an introduction can be found on [LinkedIn](https://www.linkedin.com/pulse/automated-exploratory-data-analysis-r-xander-horn/).
 
-    * [auto-EDA](https://github.com/souravbose1991/Auto-EDA) (GitHub package) - uni- and bivariate plots for data exploration in regression and classification problem. The package cleans data automatically to improve the plots. Another version of Xander Horn's version.
+    * [auto-EDA](https://github.com/souravbose1991/Auto-EDA) (GitHub package) - uni- and bivariate plots for data exploration in regression and classification problem. The package cleans data automatically to improve the plots. Another version of Xander Horn's package.
 
 - [visdat](https://github.com/ropensci/visdat) (CRAN package) - 6 exploratory/diagnostic plots for initial data analysis.
 
-- [dlookr](https://cran.r-project.org/web/packages/dlookr/) (CRAN package) - tools for data quality diagnosis and basic exploration.
-
-- [vtreat](https://cran.r-project.org/web/packages/vtreat/index.html) (CRAN package) - data treatment (pre-processing) that includes dealing with missing data and large categorical variables. Details can be found in the [paper about vtreat](https://arxiv.org/pdf/1611.09477.pdf).
+- [dlookr](https://cran.r-project.org/web/packages/dlookr/) (CRAN package) - tools for data quality diagnosis, basic exploration and feature transformations.
 
 - [RBioPlot](https://github.com/jzhangc/git_R_STATS_KBS) (GitHub package) - automated data analysis and visualization for molecular biology. Details can be found [in the paper at NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045883/).
 
-- [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has a automatic reporting module which selects best plots that summarise different projection techniques.
+- [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has an automatic reporting module which selects best plots that summarise different projection techniques.
 
 - [xray](https://cran.r-project.org/package=xray) (CRAN package) - first look at the data - distributions and anomalies. More in the [blog post](https://www.r-bloggers.com/xray-the-r-package-to-have-x-ray-vision-on-your-datasets/).
 
@@ -41,7 +39,7 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [automatic-data-explorer](https://github.com/elastacloud/automatic-data-explorer/) (GitHub package) - basic EDA and creating Markdown reports from multiple R scripts.
 
-- [xda](https://github.com/ujjwalkarn/xda) (GitHub package) - basic data summaries. No longer developed.
+- [xda](https://github.com/ujjwalkarn/xda) (GitHub package) - basic data summaries.
 
 - [RtutoR](https://github.com/anup50695/RtutoR) (GitHub repo) - learning material with a automatic reports module. More at [R-Bloggers](https://www.r-bloggers.com/automating-basic-eda/).
 
@@ -52,6 +50,10 @@ A list of software related to automatic Exploratory Data Analysis
 - [IEDA](https://github.com/krupanss/IEDA) (GitHub package) - EDA simplified through interactive visualization.
 
 - [seda](https://github.com/bruno-pinheiro/seda) (GitHub package) - fast EDA tool in active development.
+
+### Related packages
+
+- [vtreat](https://cran.r-project.org/web/packages/vtreat/index.html) (CRAN package) - data treatment (pre-processing) that includes dealing with missing data and large categorical variables. Details can be found in the [paper about vtreat](https://arxiv.org/pdf/1611.09477.pdf).
 
 
 ## Python libraries
