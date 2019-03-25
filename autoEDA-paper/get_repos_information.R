@@ -12,12 +12,14 @@ setLocalRepo(".")
 pkgs <- list(
   "xray", "arsenal", "dataMaid",
   "DataExplorer", "dlookr", "autoEDA",
-  "funModeling", "visdat", "SmartEDA"
+  "funModeling", "visdat", "SmartEDA",
+  "summarytools", "exploreR", "RtutoR"
 )
 users <- list(
   "sicarul", "eheinzen", "ekstroem",
   "boxuancui", "choonghyunryu", "XanderHorn",
-  "pablo14", "ropensci", "cran"
+  "pablo14", "ropensci", "cran",
+  "dcomtois", "cran", "anup50695"
 )
 ## Download data from GitHub ----
 ### Number of stars
@@ -82,7 +84,7 @@ issues <- lapply(
 cran_downloads_pkgs <- cran_downloads(
   packages = unlist(pkgs),
   from = "2010-10-10",
-  to = "2019-03-24"
+  to = "2019-03-25"
 )
 # asave(cran_downloads_pkgs, ".")
 # "e471d70a93d1aa208d18b7155d551f5b"
