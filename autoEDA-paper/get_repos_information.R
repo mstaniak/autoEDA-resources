@@ -87,11 +87,11 @@ cran_downloads_pkgs <- cran_downloads(
   to = "2019-03-25"
 )
 # asave(cran_downloads_pkgs, ".")
-# "e471d70a93d1aa208d18b7155d551f5b"
+# "c10449429ff5301f97b8c417f6edd459"
 ggplot(filter(cran_downloads_pkgs, count > 0),
        aes(x = date, y = count, color = package)) +
   theme_bw() +
-  geom_smooth(se = F) +
+  geom_smooth(se = F, size = 1.2) +
   ylab("number of CRAN downloads")
 make_df <- function(x) {
   counts <- x %>%
