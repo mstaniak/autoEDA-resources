@@ -12,6 +12,7 @@ library(funModeling)
 library(dlookr)
 library(summarytools)
 library(exploreR)
+library(RtutoR)
 # Set up archivist repo
 # archivist::createLocalRepo(".")
 # Load data from visdat package
@@ -72,3 +73,6 @@ summarytools_uni <- summarytools::descr(example_data)
 exploreR::massregplot(dplyr::rename(example_data, Height = `Height(cm)`), "IQ",
                       ignore = c("ID", "Income", "Died"), include.factors = T,
                       save = "plots/exploreR.pdf")
+# RtutoR example
+# RtutoR::gen_exploratory_report_app(dplyr::select(example_data, -`Height(cm)`))
+# RtutoR::launch_plotter(list(example = example_data))
