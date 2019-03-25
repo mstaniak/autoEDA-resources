@@ -11,6 +11,7 @@ library(xray)
 library(funModeling)
 library(dlookr)
 library(summarytools)
+library(exploreR)
 # Set up archivist repo
 # archivist::createLocalRepo(".")
 # Load data from visdat package
@@ -67,3 +68,7 @@ SmartEDA::ExpReport(example_data, Target = "Died", op_file = "smarteda_report2.h
 summarytools_uni <- summarytools::descr(example_data)
 # archivist::asave(summarytools_uni, repoDir = ".")
 # "9e12d5686918a5ad1c34c6857b0143df"
+# exploreR example
+exploreR::massregplot(dplyr::rename(example_data, Height = `Height(cm)`), "IQ",
+                      ignore = c("ID", "Income", "Died"), include.factors = T,
+                      save = "plots/exploreR.pdf")
