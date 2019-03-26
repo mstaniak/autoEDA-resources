@@ -2,7 +2,7 @@ library(lubridate)
 library(dplyr)
 library(stringr)
 
-cox_violent_parsed <- readr::read_csv("usecase/data/cox-violent-parsed.csv")
+cox_violent_parsed <- readr::read_csv("usecase/compas/data/cox-violent-parsed.csv")
 
 recid <- filter(cox_violent_parsed, is_recid != -1) %>%
   mutate(race = as.factor(race)) %>%
@@ -24,8 +24,9 @@ recid <- filter(cox_violent_parsed, is_recid != -1) %>%
          c_offense_date = as.Date(c_offense_date, format = "%d/%m/%Y")) %>%
   mutate(age_at_offense = as.numeric(days(c_offense_date - dob))/(60*60*24*365)) %>%
   select(-dob) %>%
-  filter(jail_days > 0) %>%
+  filter(jail_days >= 0 & !is.na(jail_days)) %>%
   mutate(c_charge_desc = str_trim(c_charge_desc)) %>%
-  mutate(c_charge_desc = str_to_lower(c_charge_desc))
+  mutate(c_charge_desc = str_to_lower(c_charge_desc)) %>%
+  unique()
 
 save(recid, file = "usecase/data/recid.rda")

@@ -18,7 +18,7 @@ library(readr)
 # archivist::createLocalRepo(".")
 comparison_table <- read_delim("C:/Users/mstaniak/Projekty/MI2DataLab/autoEDA-resources/comparison_table.csv",
                                ";", escape_double = FALSE, trim_ws = TRUE)
-archivist::asave(comparison_table, ".")
+# archivist::asave(comparison_table, ".")
 # "7113324b5b6953a393b3ce8c94672869"
 # Export table of package features.
 xtable::xtable(dplyr::mutate_if(comparison_table,
