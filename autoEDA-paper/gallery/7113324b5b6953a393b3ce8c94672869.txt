@@ -1,0 +1,11 @@
+# A tibble: 6 x 14
+  X1    X2    DataExplorer dataMaid funModeling visdat arsenal  xray autoEDA
+  <chr> <chr>        <dbl>    <dbl>       <dbl>  <dbl>   <dbl> <dbl>   <dbl>
+1 Whol~ Vari~            1        1           1      1       0     0       1
+2 Whol~ Data~            1        1           1      1       0     0       1
+3 Whol~ Othe~            1        0           0      1       0     0       0
+4 Whol~ Comp~            0        0           1      1       1     0       0
+5 Data~ Miss~            1        1           1      1       0     1       1
+6 Data~ Redu~            0        1           1      1       0     0       1
+# ... with 5 more variables: dlookr <dbl>, SmartEDA <dbl>, summarytools <dbl>,
+#   exploreR <dbl>, RtutoR <dbl>

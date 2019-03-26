@@ -18,10 +18,12 @@ library(readr)
 # archivist::createLocalRepo(".")
 comparison_table <- read_delim("C:/Users/mstaniak/Projekty/MI2DataLab/autoEDA-resources/comparison_table.csv",
                                ";", escape_double = FALSE, trim_ws = TRUE)
-# archivist::asave(comparison_table, ".")
-# "90591a7fb1b7679cc8d535d5c0e56ff7"
+archivist::asave(comparison_table, ".")
+# "7113324b5b6953a393b3ce8c94672869"
 # Export table of package features.
-xtable::xtable(dplyr::mutate_all(comparison_table, function(x) ifelse(x, "x", "")))
+xtable::xtable(dplyr::mutate_if(comparison_table,
+                                is.numeric,
+                                function(x) ifelse(x, "x", "")))
 # Load data from visdat package
 data('typical_data', package = 'visdat')
 head(typical_data)
