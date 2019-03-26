@@ -150,3 +150,38 @@ commits_time <- commit_dates_df %>%
 #                          color = package)) +
 #   theme_bw() +
 #   geom_smooth(se = F)
+# Cumulative plot by Przemek
+archivist::aread("mstaniak/autoEDA-resources/autoEDA-paper/52ec") -> stats
+
+library(scales)
+library(ggplot2)
+library(dplyr)
+stats %>%
+  filter(date > "2014-01-01" ) %>%
+  arrange(date) %>%
+  group_by(package) %>%
+  mutate(cums = cumsum(count),
+         packages = paste0(package, " (",max(cums),")"))  -> stat
+
+stat$packages <- reorder(stat$packages, stat$cums, function(x)-max(x))
+
+ggplot(stat, aes(date, cums, color = packages)) +
+  geom_step() +
+  scale_x_date(name="",breaks = as.Date(c("2014-01-01","2015-01-01","2016-01-01","2017-01-01","2018-01-01","2019-01-01")),
+               labels = c(2014:2019))+
+  scale_y_continuous(name = "", labels = comma) + DALEX::theme_drwhy()+
+  theme(legend.position = "right", legend.direction = "vertical")+
+  scale_color_discrete(name="") +
+  ggtitle("Total number of downloads", "Based on CRAN statistics")
+
+stats %>%
+  filter(count > 0) %>%
+  group_by(package) %>%
+  summarise(num_downloads = sum(count),
+            first_day_cran = min(date),
+            today = today() - days(1)) %>%
+  arrange(-num_downloads) %>%
+  mutate(difference = interval(first_day_cran, today)) %>%
+  mutate(years = difference %/% years(1),
+         months = difference %/% months(1) - 12*(years)) %>%
+  select(-difference, -first_day_cran, -today)
