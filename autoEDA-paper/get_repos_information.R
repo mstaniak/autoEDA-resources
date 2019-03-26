@@ -28,66 +28,67 @@ stars <- lapply(
   function(x)
     unlist(lapply(1:3, function(y) content(GET(
       url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                   "/stargazers?per_page=100&page=", y))
+                   "/stargazers?access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8&per_page=100&page=", y))
     )),
            recursive = FALSE)
 
 )
 # asave(stars, ".")
-# "5dd43cd9340508c7771345b52d98ca59"
+# "2dbb878d8b8ed530395c72e16f250060"
 ### Number of forks
 forks <- lapply(
     1:length(pkgs),
     function(x) content(GET(
       url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                   "/forks?per_page=100&page=1&client_id=mstaniak"))
+                   "/forks?access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8&per_page=100&page=1&client_id=mstaniak"))
     )
   )
 # asave(forks, ".")
-# "e33a399d437aaf2c3e161ee8a1fd9271"
+# "f9c5c973db0435f9cc33c771ce0eeb72"
 ### Number of commits
 commits <- lapply(
   1:length(pkgs),
   function(x)
       unlist(lapply(1:6, function(y) content(GET(
         url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                     "/commits?per_page=100&page=", y, "&client_id=mstaniak"))
+                     "/commits?per_page=100&page=", y,
+                     "&access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8"))
       )),
       recursive = FALSE)
 )
 # asave(commits, ".")
-# "06600bb7834fa1e20139f915974923c6"
+# "5ccbfed0300dd1225378d88911008319"
 ### Number of contributors
 contributors <- lapply(
   1:length(pkgs),
   function(x) content(GET(
     url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                 "/contributors"))
+                 "/contributors?access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8"))
   )
 )
 # asave(contributors, ".")
-# "df423237257e9b2b6d589e3fd9914bc6"
+# "4b5d35082facfa8ea6157040cbc980e6"
 ### Number of issues
 issues <- lapply(
   1:length(pkgs),
   function(x)
     unlist(lapply(1:2, function(y) content(GET(
       url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                   "/issues?state=all&client_id=mstaniak&per_page=100&page=", y))
+                   "/issues?state=all&access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8&per_page=100&page=", y))
     )),
     recursive = FALSE)
 )
 # asave(issues, ".")
-# "48657efba4a09fb16cb4aca84005c6d5"
+# "fc51661342be71242018b3f10687df06"
 ## Download data from CRAN ----
 ### Number of CRAN downloads
 cran_downloads_pkgs <- cran_downloads(
   packages = unlist(pkgs),
   from = "2010-10-10",
-  to = "2019-03-25"
+  to = "2019-03-26"
 )
 # asave(cran_downloads_pkgs, ".")
-# "c10449429ff5301f97b8c417f6edd459"
+# "52ec582b95f35297596d1bc1138b1f79"
 ggplot(filter(cran_downloads_pkgs, count > 0),
        aes(x = date, y = count, color = package)) +
   theme_bw() +
