@@ -115,7 +115,7 @@ stars_df <- make_df(stars) %>%
   rename(stars = value)
 pkgs_table <- cran_downloads_pkgs %>%
   group_by(package) %>%
-  filter(count > 0) %>%
+  filter(count > 0 | package == "autoEDA") %>%
   summarise(all_downloads = sum(count),
             release_date = min(date)) %>%
   arrange(desc(all_downloads)) %>%
@@ -124,13 +124,14 @@ pkgs_table <- cran_downloads_pkgs %>%
   left_join(contributors_df) %>%
   left_join(issues_df) %>%
   left_join(forks_df) %>%
-  mutate(release_date = as.character(release_date))
+  mutate(release_date = as.character(release_date)) %>%
+  mutate(release_date = ifelse(package == "autoEDA", "-", release_date))
 # asave(pkgs_table, ".")
-# "56e9ff705385c2247a2962cc85e4473f"
+# "006df76daeb59394b9179624b188e1f5"
 pkgs_table %>%
   rename(`CRAN downloads` = all_downloads,
          `CRAN release` = release_date) %>%
-  xtable()
+  xtable::xtable()
 ## First commit
 commit_dates <- lapply(commits,
        function(x)
