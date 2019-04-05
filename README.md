@@ -89,6 +89,8 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [Automatic Statistician](https://automaticstatistician.com/index/) - tool for automated EDA and modeling.
 
+- Several Shiny apps by R Squared Computing, including [visulizer](https://www.rsquaredcomputing.com/shiny/xplorerr/) and [descriptr](https://www.rsquaredcomputing.com/shiny/descriptr/).
+
 
 ## Standalone software
 
