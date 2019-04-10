@@ -5,6 +5,8 @@ A list of software related to automatic Exploratory Data Analysis
 
 ## R packages
 
+[My summary of R packages is available on arxiv](https://arxiv.org/pdf/1904.02101.pdf)
+
 ### Complete Package
 
 - [dataMaid](https://github.com/ekstroem/dataMaid) (CRAN package) - automated checks of data validity.
