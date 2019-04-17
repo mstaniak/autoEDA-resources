@@ -25,8 +25,6 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [dlookr](https://cran.r-project.org/web/packages/dlookr/) (CRAN package) - tools for data quality diagnosis, basic exploration and feature transformations.
 
-- [RBioPlot](https://github.com/jzhangc/git_R_STATS_KBS) (GitHub package) - automated data analysis and visualization for molecular biology. Details can be found [in the paper at NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045883/).
-
 - [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has an automatic reporting module which selects best plots that summarise different projection techniques.
 
 - [xray](https://cran.r-project.org/package=xray) (CRAN package) - first look at the data - distributions and anomalies. More in the [blog post](https://www.r-bloggers.com/xray-the-r-package-to-have-x-ray-vision-on-your-datasets/).
@@ -56,6 +54,13 @@ A list of software related to automatic Exploratory Data Analysis
 - [IEDA](https://github.com/krupanss/IEDA) (GitHub package) - EDA simplified through interactive visualization.
 
 - [seda](https://github.com/bruno-pinheiro/seda) (GitHub package) - fast EDA tool in active development.
+
+### Domain-specific packages
+
+- [compMS2Miner: An Automatable Metabolite Identification, Visualization, and Data-Sharing R Package for High-Resolution LC-MS Data Sets](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6338221/)
+
+- [RBioPlot](https://github.com/jzhangc/git_R_STATS_KBS) (GitHub package) - automated data analysis and visualization for molecular biology. Details can be found [in the paper at NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045883/).
+
 
 ### Related packages
 
