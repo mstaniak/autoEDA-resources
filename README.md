@@ -81,6 +81,8 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [lens](https://github.com/facultyai/lens) (pip library) - fast calculation of summary statistics and correlations. [Presentation about the library](https://www.slideshare.net/VictorZabalza/automated-data-exploration-building-efficient-analysis-pipelines-with-dask-81328214).
 
+- [pandas-profiling](https://github.com/pandas-profiling/pandas-profiling) - popular library for quick data summaries and correlation analysis.
+
 - [speedML](https://speedml.com) (pip library) - large library for ML with module dedicated to fast EDA. 
 
 ### Packages in Development
