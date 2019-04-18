@@ -85,6 +85,8 @@ A list of software related to automatic Exploratory Data Analysis
 
 ### Packages in Development
 
+- [edaviz](https://github.com/FlorianWetschoreck/edaviz) - Python library for fast data exploration in private beta testing phase. Will provide functions for dataset overviews, bivariate plots and finding good predictors.
+
 - [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
 
 - [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
