@@ -66,6 +66,7 @@ A list of software related to automatic Exploratory Data Analysis
 
 - [vtreat](https://cran.r-project.org/web/packages/vtreat/index.html) (CRAN package) - data treatment (pre-processing) that includes dealing with missing data and large categorical variables. Details can be found in the [paper about vtreat](https://arxiv.org/pdf/1611.09477.pdf).
 
+- [report](https://github.com/easystats/report) - automated modeling report generation.
 
 ## Python libraries
 
