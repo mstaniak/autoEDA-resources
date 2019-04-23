@@ -64,13 +64,15 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [RBioPlot](https://github.com/jzhangc/git_R_STATS_KBS) (GitHub package) - automated data analysis and visualization for molecular biology. Details can be found [in the paper at NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045883/).
 
+- [ExPanDaR](https://cran.r-project.org/web/packages/ExPanDaR/index.html) - package for interactive data visualization. Designed for longitudinal data, but can be also used with other types of data after setting an artificial time variable. Shiny apps with examples are provided on the [github website of the package](https://github.com/joachim-gassen/ExPanDaR).
+
 ### Related packages
 
 - [vtreat](https://cran.r-project.org/web/packages/vtreat/index.html) (CRAN package) - data treatment (pre-processing) that includes dealing with missing data and large categorical variables. Details can be found in the [paper about vtreat](https://arxiv.org/pdf/1611.09477.pdf).
 
 - [report](https://github.com/easystats/report) - automated modeling report generation.
 
-- [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has an automatic reporting module which selects best plots that summarise different projection techniques.
+- [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has an automatic reporting module which selects best plots that summarise different projection techniques. 
 
 ## Python libraries
 
