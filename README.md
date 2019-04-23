@@ -1,7 +1,10 @@
 # autoEDA-resources
 
-A list of software related to automatic Exploratory Data Analysis
-
+A list of software and papers related to automated Exploratory Data Analysis, including
+   
+   - fast data exploration and visualization,
+   - augmented analytics,
+   - visualization recommendation and other tools that speed up data exploration (visual exploration in particular).
 
 ## R packages
 
