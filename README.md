@@ -6,11 +6,13 @@ A list of software and papers related to automated Exploratory Data Analysis, in
    - augmented analytics,
    - visualization recommendation and other tools that speed up data exploration (visual exploration in particular).
 
+# Software
+
 ## R packages
 
 [My summary of R packages is available on arxiv](https://arxiv.org/pdf/1904.02101.pdf)
 
-### Complete Package
+### Complete Packages
 
 - [dataMaid](https://github.com/ekstroem/dataMaid) (CRAN package) - automated checks of data validity.
 
@@ -27,8 +29,6 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 - [visdat](https://github.com/ropensci/visdat) (CRAN package) - 6 exploratory/diagnostic plots for initial data analysis.
 
 - [dlookr](https://cran.r-project.org/web/packages/dlookr/) (CRAN package) - tools for data quality diagnosis, basic exploration and feature transformations.
-
-- [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has an automatic reporting module which selects best plots that summarise different projection techniques.
 
 - [xray](https://cran.r-project.org/package=xray) (CRAN package) - first look at the data - distributions and anomalies. More in the [blog post](https://www.r-bloggers.com/xray-the-r-package-to-have-x-ray-vision-on-your-datasets/).
 
@@ -64,12 +64,13 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [RBioPlot](https://github.com/jzhangc/git_R_STATS_KBS) (GitHub package) - automated data analysis and visualization for molecular biology. Details can be found [in the paper at NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045883/).
 
-
 ### Related packages
 
 - [vtreat](https://cran.r-project.org/web/packages/vtreat/index.html) (CRAN package) - data treatment (pre-processing) that includes dealing with missing data and large categorical variables. Details can be found in the [paper about vtreat](https://arxiv.org/pdf/1611.09477.pdf).
 
 - [report](https://github.com/easystats/report) - automated modeling report generation.
+
+- [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has an automatic reporting module which selects best plots that summarise different projection techniques.
 
 ## Python libraries
 
@@ -97,7 +98,6 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
 
-
 ## Web services
 
 - [DIVE](https://dive.media.mit.edu/) - MIT's tools for data exploration that tries to choose best (most informative) visualizations.
@@ -106,15 +106,13 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - Several Shiny apps by R Squared Computing, including [visulizer](https://www.rsquaredcomputing.com/shiny/xplorerr/) and [descriptr](https://www.rsquaredcomputing.com/shiny/descriptr/).
 
-
 ## Standalone software
 
 - [auto-eda](https://github.com/darenasc/auto-eda) - automatic EDA with SQL.
 
 - [elycite](http://lrei.github.io/elycite/) - tools for exploration and modelling available (locally) as an web application. Designed for NLP problems.
 
-
-## Papers
+# Papers
 
 - [Interactive Data Exploration with “Big Data Tukey Plots”](http://www.absolutedc.com/resources/pdf/tukey.pdf) - automated visualization of big data.
 
