@@ -40,6 +40,8 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [summarytools](https://cran.r-project.org/package=summarytools) (CRAN package) - table to summarise datasets and perform simple uni- and bivariate analyses.
 
+- [inspectdf](https://cran.r-project.org/web/packages/inspectdf/index.html) (CRAN package) - tools for column-wise exploration and comparison of data frames. Examples are provided in a README of the [GitHub repo](https://github.com/alastairrushworth/inspectdf).
+
 ### Packages in Development
 
 - [AEDA](https://github.com/tuanle618/AEDA) (GitHub package) - summary statistics, correlation analysis, cluster analysis, PCA & other projections.
