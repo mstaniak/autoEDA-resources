@@ -102,6 +102,10 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
 
+## Stata packages
+
+- [eda](https://github.com/wbuchanan/eda) - a package that produces a pdf report with all permutations of univariate and bivariate visualizations and tables. Notably, three-dimensional displays are also possible.
+
 ## Web services
 
 - [DIVE](https://dive.media.mit.edu/) - MIT's tools for data exploration that tries to choose best (most informative) visualizations.
@@ -133,3 +137,7 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 ## Augmented analytics
 
 - [Augmenting Visualizations with Interactive Data Facts to Facilitate Interpretation and Communication](https://arjun010.github.io/static/papers/voder-infovis18.pdf).
+
+# Conference presentations
+
+- [Automating exploratory data analysis tasks with eda - Billy Buchanan](https://wbuchanan.github.io/stataConference2018/)
