@@ -42,6 +42,10 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [inspectdf](https://cran.r-project.org/web/packages/inspectdf/index.html) (CRAN package) - tools for column-wise exploration and comparison of data frames. Examples are provided in a README of the [GitHub repo](https://github.com/alastairrushworth/inspectdf).
 
+- [explore](https://cran.r-project.org/package=explore) (CRAN package) - interactive Shiny app for comprehensive dataset exploration (including uni- and bivariate relationships, correlation analysis and simple modeling with decision trees) and stand-alone function for quick exploration. Examples are given in a [vignette](https://cran.r-project.org/web/packages/explore/vignettes/explore.html)
+
+- [skimr](https://cran.r-project.org/package=skimr) (CRAN package) - well formatted summaries of data frames, vector and matrices. Examples are provided in a [vignette](https://cran.r-project.org/web/packages/skimr/vignettes/Using_skimr.html)
+
 ### Packages in Development
 
 - [AEDA](https://github.com/tuanle618/AEDA) (GitHub package) - summary statistics, correlation analysis, cluster analysis, PCA & other projections.
