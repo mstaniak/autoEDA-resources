@@ -13,7 +13,11 @@ library(dlookr)
 library(summarytools)
 library(exploreR)
 library(RtutoR)
+library(explore)
+library(skimr)
+library(inspectdf)
 library(readr)
+library(ExPanDaR)
 # Set up archivist repo
 # archivist::createLocalRepo(".")
 comparison_table <- read_delim("C:/Users/mstaniak/Projekty/MI2DataLab/autoEDA-resources/comparison_table.csv",
@@ -85,3 +89,9 @@ exploreR::massregplot(dplyr::rename(example_data, Height = `Height(cm)`), "IQ",
 # RtutoR example
 # RtutoR::gen_exploratory_report_app(dplyr::select(example_data, -`Height(cm)`))
 # RtutoR::launch_plotter(list(example = example_data))
+# skimr example
+skimr_result <- skimr::skim(example_data)
+kable(skimr_result)
+# explore example
+explore::explore(typical_data)
+# inspectdf example
