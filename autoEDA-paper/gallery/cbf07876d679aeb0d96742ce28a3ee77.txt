@@ -1,0 +1,9 @@
+# A tibble: 6 x 5
+  col_1  col_2    corr_1   corr_2  p_value
+  <chr>  <chr>     <dbl>    <dbl>    <dbl>
+1 Income IQ      1       1        NaN     
+2 IQ     Height -0.0479  0.0279     0.0905
+3 Income Height -0.0479  0.0279     0.0905
+4 Height Age    -0.0127  0.000688   0.766 
+5 IQ     Age     0.00767 0.0310     0.602 
+6 Income Age     0.00767 0.0310     0.602 

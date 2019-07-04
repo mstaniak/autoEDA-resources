@@ -32,6 +32,9 @@ xtable::xtable(dplyr::mutate_if(comparison_table,
 data('typical_data', package = 'visdat')
 head(typical_data)
 example_data <- typical_data[1:1000, ]
+# General summary
+example_data2 <- example_data
+xtable(dfSummary(data.frame(Race = example_data$Race, Income = as.numeric(as.character(example_data$Income)))))
 # archivist::asave(example_data, repoDir = ".")
 # "278c7e64ab715cf36d0233056e18e1b9",
 # visdat example
@@ -93,5 +96,24 @@ exploreR::massregplot(dplyr::rename(example_data, Height = `Height(cm)`), "IQ",
 skimr_result <- skimr::skim(example_data)
 kable(skimr_result)
 # explore example
-explore::explore(typical_data)
+## explore::explore(typical_data)
+explore_tree <- explore::explain_tree(typical_data[, c("Race", "Died")], "Died")
+# explore::data_dict_md(example_data, output_dir = "plots/explore/")
+explore::report(dplyr::rename(example_data, `Height` = `Height(cm)`), "Died", output_dir = "plots/explore/")
+# archivist::asave(explore_tree, repoDir = ".")
+# "dc473cf0648c55b4bc10d49c050c91fe"
 # inspectdf example
+
+inspect_types(example_data) %>%
+  show_plot()
+inspect_mem(example_data) %>%
+  show_plot()
+inspect_na(example_data)
+inspect_cor()
+inspect_imb()
+inspect_num(example_data) %>%
+  show_plot()
+attributes()
+inspect_cat()
+
+# ExPanDaR example
