@@ -1,0 +1,7 @@
+        date count package
+1 2010-10-10     0    xray
+2 2010-10-11     0    xray
+3 2010-10-12     0    xray
+4 2010-10-13     0    xray
+5 2010-10-14     0    xray
+6 2010-10-15     0    xray

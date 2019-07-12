@@ -18,6 +18,7 @@ library(skimr)
 library(inspectdf)
 library(readr)
 library(ExPanDaR)
+library(dplyr)
 # Set up archivist repo
 # archivist::createLocalRepo(".")
 comparison_table <- read_delim("C:/Users/mstaniak/Projekty/MI2DataLab/autoEDA-resources/comparison_table.csv",
@@ -92,28 +93,34 @@ exploreR::massregplot(dplyr::rename(example_data, Height = `Height(cm)`), "IQ",
 # RtutoR example
 # RtutoR::gen_exploratory_report_app(dplyr::select(example_data, -`Height(cm)`))
 # RtutoR::launch_plotter(list(example = example_data))
-# skimr example
-skimr_result <- skimr::skim(example_data)
-kable(skimr_result)
 # explore example
 ## explore::explore(typical_data)
 explore_tree <- explore::explain_tree(typical_data[, c("Race", "Died")], "Died")
 # explore::data_dict_md(example_data, output_dir = "plots/explore/")
 explore::report(dplyr::rename(example_data, `Height` = `Height(cm)`), "Died", output_dir = "plots/explore/")
 # archivist::asave(explore_tree, repoDir = ".")
-# "dc473cf0648c55b4bc10d49c050c91fe"
+# aread("dc473cf0648c55b4bc10d49c050c91fe")
 # inspectdf example
-
-inspect_types(example_data) %>%
-  show_plot()
-inspect_mem(example_data) %>%
-  show_plot()
-inspect_na(example_data)
-inspect_cor()
-inspect_imb()
-inspect_num(example_data) %>%
-  show_plot()
-attributes()
-inspect_cat()
-
+typical_data_proper_types <- typical_data %>%
+  rename(Height = `Height(cm)`) %>%
+  mutate(Age = as.numeric(as.character(Age)),
+         Height = as.numeric(as.character(Height)),
+         IQ = as.numeric(as.character(IQ)),
+         Income = as.numeric(as.character(IQ)))
+inspectdf_example <- inspect_cor(typical_data_proper_types[1:1000, ],
+            typical_data_proper_types[4001:5000, ])
+# asave(inspectdf_example, repoDir = ".")
+# aread("cbf07876d679aeb0d96742ce28a3ee77")
+show_plot(inspectdf_example)
 # ExPanDaR example
+# Code by Joachim Gassen
+df <- cbind(typical_data, ts_id = 1)
+df$Income <- as.numeric(df$Income)
+df$Age <- as.numeric(df$Age)
+ExPanD(df, cs_id = "ID", ts_id = "ts_id",
+       components = c(trend_graph = F, quantile_trend_graph = F))
+expandar_example <- ExPanDaR::prepare_scatter_plot(mutate(example_data, Income =  as.numeric(as.character(Income))), "IQ", "Income", "Died")
+# asave(expandar_example, repoDir = ".")
+# aread("9c5d77a063a496a56b83da3848fafb00")
+# data
+# aread(""9c0593f16fa526e4041cec881540fafd"")

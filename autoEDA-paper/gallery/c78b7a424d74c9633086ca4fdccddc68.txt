@@ -1,0 +1,9 @@
+# A tibble: 6 x 8
+  package      all_downloads release_date stars commits contributors issues forks
+  <chr>                <dbl> <chr>        <int>   <int>        <int>  <int> <int>
+1 summarytools         84737 2014-08-11     255     900            6     76    33
+2 DataExplorer         82624 2016-03-01     235     187            2    121    44
+3 visdat               68978 2017-07-11     300     426           12    122    39
+4 funModeling          54232 2016-02-07      58     126            2     13    18
+5 arsenal              39234 2016-12-30      59     637            3    200     4
+6 dataMaid             23972 2017-01-02      68     473            2     45    18
