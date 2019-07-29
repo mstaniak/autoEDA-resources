@@ -80,6 +80,8 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [FactoInvestigate](http://factominer.free.fr/reporting/index.html) (CRAN package) - has an automatic reporting module which selects best plots that summarise different projection techniques. 
 
+- [gtsummary](https://github.com/ddsjoberg/gtsummary) (GitHub package) - presentation-ready tables summarizing data sets, regression models, and more.
+
 ## Python libraries
 
 ### Complete Packages
