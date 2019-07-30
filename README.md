@@ -108,6 +108,10 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 
 - [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
 
+### Related packages
+
+- [pyvtreat](https://github.com/WinVector/pyvtreat) - Python version of the R's vtreat package.
+
 ## Stata packages
 
 - [eda](https://github.com/wbuchanan/eda) - a package that produces a pdf report with all permutations of univariate and bivariate visualizations and tables. Notably, three-dimensional displays are also possible.
