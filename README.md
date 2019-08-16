@@ -144,6 +144,7 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 - [Foresight: Recommending Visual Insights](http://www.vldb.org/pvldb/vol10/p1937-parthasarathy.pdf) - Foresight is a system that helps the user rapidly discover visual insights from large high-dimensional datasets.
 - [DIVE: A Mixed-Initiative System Supporting Integrated Data Exploration Workflows](https://dive.media.mit.edu/assets/DIVE_HILDA_2018.pdf). The web app is available on [MIT website](https://dive.media.mit.edu/).
 - [Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations](https://ieeexplore.ieee.org/document/7192728).
+- [VizML: A Machine Learning Approach to Visualization Recommendation](https://dl.acm.org/citation.cfm?id=3300358)
 
 ## Augmented analytics
 
