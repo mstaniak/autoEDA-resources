@@ -21,12 +21,13 @@ library(ExPanDaR)
 library(dplyr)
 # Set up archivist repo
 # archivist::createLocalRepo(".")
-comparison_table <- read_delim("C:/Users/mstaniak/Projekty/MI2DataLab/autoEDA-resources/comparison_table.csv",
-                               ";", escape_double = FALSE, trim_ws = TRUE)
+comparison_table <- read_delim("../comparison_table.csv",
+                               ",", escape_double = FALSE, trim_ws = TRUE)
 # archivist::asave(comparison_table, ".")
 # "7113324b5b6953a393b3ce8c94672869"
 # Export table of package features.
-xtable::xtable(dplyr::mutate_if(comparison_table,
+columns_order <- sort(colnames(comparison_table)[!(colnames(comparison_table) %in% c("X1", "X2"))])
+xtable::xtable(dplyr::mutate_if(comparison_table[, c("X1", "X2", columns_order)],
                                 is.numeric,
                                 function(x) ifelse(x, "x", "")))
 # Load data from visdat package

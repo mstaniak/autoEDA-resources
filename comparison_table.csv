@@ -1,35 +1,35 @@
-;;DataExplorer;dataMaid;funModeling;visdat;arsenal;xray;autoEDA;dlookr;SmartEDA;summarytools;exploreR;RtutoR
-Whole dataset;Variable types;1;1;1;1;0;0;1;1;1;1;0;0
-Whole dataset;Dataset size;1;1;1;1;0;0;1;1;1;0;0;0
-Whole dataset;Other info;1;0;0;1;0;0;0;0;0;0;0;0
-Whole dataset;Compare two datasets;0;0;1;1;1;0;0;0;0;0;0;0
-Data validity;Missing values;1;1;1;1;0;1;1;1;1;1;0;0
-Data validity;Redundant columns;0;1;1;1;0;0;1;1;1;1;0;0
-Data validity;Outliers;0;1;1;0;0;0;1;1;0;0;0;0
-Data validity;Atypical values;0;1;1;0;0;1;0;0;0;0;0;0
-Data validity;Level encoding;0;1;0;0;0;0;0;0;0;0;0;0
-Univariate analysis;Descriptive statistics;0;1;1;0;0;1;1;1;1;1;0;1
-Univariate analysis;Histograms;1;1;1;0;0;0;1;1;1;1;0;1
-Univariate analysis;Boxplots;1;0;0;0;0;0;0;0;0;0;0;0
-Univariate analysis;Bar plots;1;1;1;0;0;0;1;1;1;1;0;1
-Univariate analysis;QQ plots;1;0;0;0;0;0;0;1;1;0;0;0
-Bivariate analysis;Descriptive statistics;0;0;0;0;1;0;0;1;1;1;0;1
-Bivariate analysis;Correlation matrix;1;0;0;1;0;0;0;1;0;0;0;0
-Bivariate analysis;1 vs each correlation;0;0;1;0;0;0;1;0;1;0;1;0
-Bivariate analysis;Time-dependency;0;0;0;0;1;1;0;0;0;0;0;0
-Bivariate analysis;Bar plots by target;1;0;1;0;0;0;1;1;1;0;0;1
-Bivariate analysis;Histograms by target;0;0;1;0;0;0;1;1;1;0;0;0
-Bivariate analysis;Scatter plots;1;0;0;0;0;0;0;0;1;0;1;1
-Bivariate analysis;Contigency tables;0;0;0;0;1;0;0;1;1;1;0;0
-Bivariate analysis;Other stats. for factors;0;0;1;0;0;0;0;0;1;0;0;0
-Multivariate analysis;PCA;1;0;0;0;0;0;0;0;0;0;0;0
-Multivariate analysis;Stat. models;0;0;0;0;1;0;0;0;0;0;0;0
-Multivariate analysis;Parallel coord. Plot;0;0;0;0;0;0;0;0;1;0;0;0
-Feature engineering;Imputation;1;0;0;0;0;0;0;1;0;0;0;0
-Feature engineering;Scaling;0;0;1;0;0;0;0;1;0;0;1;0
-Feature engineering;Skewness reduction;0;0;0;0;0;0;0;1;0;0;0;0
-Feature engineering;Outlier treatment;0;0;1;0;0;0;0;1;0;0;0;0
-Feature engineering;Binning;1;0;1;0;0;0;0;1;0;0;0;0
-Feature engineering;Merging levels;1;0;1;0;0;0;0;0;0;0;0;0
-Quick reporting;PDF/HTML reports;1;1;0;0;0;0;1;1;1;0;0;1
-Quick reporting;Saving plots/outputs;0;0;1;0;1;1;0;0;0;1;1;0
+,,DataExplorer,dataMaid,funModeling,visdat,arsenal,xray,autoEDA,dlookr,SmartEDA,summarytools,exploreR,RtutoR,explore,ExPanDar,inspectdf
+Whole dataset,Variable types,1,1,1,1,0,0,1,1,1,1,0,0,1,0,1
+Whole dataset,Dimensions,1,1,1,1,0,0,1,1,1,0,0,0,0,1,1
+Whole dataset,Other info,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+Whole dataset,Compare two datasets,0,0,1,1,1,0,0,0,0,0,0,0,0,0,1
+Data validity,Missing values,1,1,1,1,0,1,1,1,1,1,0,0,1,1,1
+Data validity,Redundant columns,0,1,1,1,0,0,1,1,1,1,0,0,1,0,0
+Data validity,Outliers,0,1,1,0,0,0,1,1,0,0,0,0,0,1,0
+Data validity,Atypical values,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0
+Data validity,Level encoding,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Univariate analysis,Descriptive statistics,0,1,1,0,0,1,1,1,1,1,0,1,1,1,1
+Univariate analysis,Histograms,1,1,1,0,0,0,1,1,1,1,0,1,1,1,1
+Univariate analysis,Other dist. plots,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Univariate analysis,Bar plots,1,1,1,0,0,0,1,1,1,1,0,1,1,1,1
+Univariate analysis,QQ plots,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+Bivariate analysis,Descriptive statistics,0,0,0,0,1,0,0,1,1,1,0,1,1,0,0
+Bivariate analysis,Correlation matrix,1,0,0,1,0,0,0,1,0,0,0,0,0,1,1
+Bivariate analysis,1 vs each correlation,0,0,1,0,0,0,1,0,1,0,1,0,0,0,0
+Bivariate analysis,Time-dependency,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0
+Bivariate analysis,Bar plots by target,1,0,1,0,0,0,1,1,1,0,0,1,1,1,0
+Bivariate analysis,Num. plots by target,0,0,1,0,0,0,1,1,1,0,0,0,1,1,0
+Bivariate analysis,Scatter plots,1,0,0,0,0,0,0,0,1,0,1,1,0,1,0
+Bivariate analysis,Contigency tables,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0
+Bivariate analysis,Other stats. for factors,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1
+Multivariate analysis,PCA,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Multivariate analysis,Stat. models,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0
+Multivariate analysis,Parallel coord. Plot,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Feature engineering,Imputation,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0
+Feature engineering,Scaling,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0
+Feature engineering,Skewness reduction,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Feature engineering,Outlier treatment,0,0,1,0,0,0,0,1,0,0,0,0,1,1,0
+Feature engineering,Binning,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0
+Feature engineering,Merging levels,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Quick reporting,PDF/HTML reports,1,1,0,0,0,0,1,1,1,0,0,1,1,0,0
+Quick reporting,Saving plots/outputs,0,0,1,0,1,1,0,0,0,1,1,0,0,0,0

@@ -13,93 +13,96 @@ pkgs <- list(
   "xray", "arsenal", "dataMaid",
   "DataExplorer", "dlookr", "autoEDA",
   "funModeling", "visdat", "SmartEDA",
-  "summarytools", "exploreR", "RtutoR"
+  "summarytools", "exploreR", "RtutoR",
+  "explore", "inspectdf", "ExPanDaR"
 )
 users <- list(
   "sicarul", "eheinzen", "ekstroem",
   "boxuancui", "choonghyunryu", "XanderHorn",
   "pablo14", "ropensci", "cran",
-  "dcomtois", "cran", "anup50695"
+  "dcomtois", "cran", "anup50695",
+  "rolkra", "alastairrushworth", "joachim-gassen"
 )
 ## Download data from GitHub ----
 ### Number of stars
 stars <- lapply(
   1:length(pkgs),
   function(x)
-    unlist(lapply(1:3, function(y) content(GET(
+    unlist(lapply(1:4, function(y) content(GET(
       url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                   "/stargazers?access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8&per_page=100&page=", y))
+                   "/stargazers?access_token=556513e02c4e3fec008bc889a7a0ebf956d9c8e1&client_id=mstaniak&per_page=100&page=", y))
     )),
            recursive = FALSE)
 
 )
 # asave(stars, ".")
-# "2dbb878d8b8ed530395c72e16f250060"
-# stars <- aread("2dbb878d8b8ed530395c72e16f250060")
+# "145b6f387784dc85df6d9c1d0cfaa59e"
+# stars <- aread("145b6f387784dc85df6d9c1d0cfaa59e")
 ### Number of forks
 forks <- lapply(
     1:length(pkgs),
     function(x) content(GET(
       url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                   "/forks?access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8&per_page=100&page=1&client_id=mstaniak"))
+                   "/forks?access_token=556513e02c4e3fec008bc889a7a0ebf956d9c8e1&per_page=100&page=1&client_id=mstaniak"))
     )
   )
 # asave(forks, ".")
-# "f9c5c973db0435f9cc33c771ce0eeb72"
-# forks <- aread("f9c5c973db0435f9cc33c771ce0eeb72")
+# "c4857f5011309f328e29e81dad30df0f"
+# forks <- aread("c4857f5011309f328e29e81dad30df0f")
 ### Number of commits
 commits <- lapply(
   1:length(pkgs),
   function(x)
-      unlist(lapply(1:9, function(y) content(GET(
+      unlist(lapply(1:10, function(y) content(GET(
         url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
                      "/commits?per_page=100&page=", y,
-                     "&access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8"))
+                     "&access_token=556513e02c4e3fec008bc889a7a0ebf956d9c8e1&client_id=mstaniak"))
       )),
       recursive = FALSE)
 )
 # asave(commits, ".")
-# "fc607fdc773ff48287bcea8ba5d574bf"
-# commits <- aread("fc607fdc773ff48287bcea8ba5d574bf")
+# "2ca1e75e7957ebaeb70c59a51d24ab8b"
+# commits <- aread("2ca1e75e7957ebaeb70c59a51d24ab8b")
 ### Number of contributors
 contributors <- lapply(
   1:length(pkgs),
   function(x) content(GET(
     url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                 "/contributors?access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8"))
+                 "/contributors?access_token=556513e02c4e3fec008bc889a7a0ebf956d9c8e1&client_id=mstaniak"))
   )
 )
 # asave(contributors, ".")
-# "4b5d35082facfa8ea6157040cbc980e6"
-# contributors <- aread("4b5d35082facfa8ea6157040cbc980e6")
+# "23d58aa3764c3efbe32eea4b04ad219c"
+# contributors <- aread("23d58aa3764c3efbe32eea4b04ad219c")
 ### Number of issues
 issues <- lapply(
   1:length(pkgs),
   function(x)
     unlist(lapply(1:2, function(y) content(GET(
       url = paste0("https://api.github.com/repos/", users[[x]], "/", pkgs[[x]],
-                   "/issues?state=all&access_token=ba1355603134b281bf18295bcb39ac4d7211fcc8&per_page=100&page=", y))
+                   "/issues?state=all&access_token=556513e02c4e3fec008bc889a7a0ebf956d9c8e1&client_id=mstaniak&per_page=100&page=", y))
     )),
     recursive = FALSE)
 )
 # asave(issues, ".")
-# "fc51661342be71242018b3f10687df06"
-# issues <- aread("fc51661342be71242018b3f10687df06")
+# "aec41603cd4d15aa3004d55c2eb2ac13"
+# issues <- aread("aec41603cd4d15aa3004d55c2eb2ac13")
 ## Download data from CRAN ----
 ### Number of CRAN downloads
 cran_downloads_pkgs <- cran_downloads(
   packages = unlist(pkgs),
   from = "2010-10-10",
-  to = "2019-03-26"
+  to = "2019-07-12"
 )
 # asave(cran_downloads_pkgs, ".")
-# "52ec582b95f35297596d1bc1138b1f79"
-# cran_downloads_pkgs <- aread("52ec582b95f35297596d1bc1138b1f79")
+# ""aec96610995784bdd2cb4aaba5a45618"
+# cran_downloads_pkgs <- aread("aec96610995784bdd2cb4aaba5a45618")
 ggplot(filter(cran_downloads_pkgs, count > 0),
        aes(x = date, y = count, color = package)) +
   theme_bw() +
   geom_smooth(se = F, size = 1.2) +
-  ylab("number of CRAN downloads")
+  ylab("number of CRAN downloads") +
+  DALEX::theme_drwhy()
 make_df <- function(x) {
   counts <- x %>%
     lapply(length) %>%
@@ -133,11 +136,7 @@ pkgs_table <- cran_downloads_pkgs %>%
   mutate(release_date = as.character(release_date)) %>%
   mutate(release_date = ifelse(package == "autoEDA", "-", release_date))
 # asave(pkgs_table, ".")
-# "bdc8544ff612c86a092eee86cb1ed111"
-pkgs_table %>%
-  rename(`CRAN downloads` = all_downloads,
-         `CRAN release` = release_date) %>%
-  xtable::xtable()
+# "50a749c73445c034ec7c9530da8e0a61"
 ## First commit
 commit_dates <- lapply(commits,
        function(x)
@@ -158,7 +157,7 @@ commits_time <- commit_dates_df %>%
 #   geom_smooth(se = F)
 # Cumulative plot by Przemek
 archivist::aread("mstaniak/autoEDA-resources/autoEDA-paper/52ec") -> stats
-
+stats <- cran_downloads_pkgs
 library(scales)
 library(ggplot2)
 library(dplyr)
@@ -180,8 +179,8 @@ ggplot(stat, aes(date, cums, color = packages)) +
   scale_color_discrete(name="") +
   ggtitle("Total number of downloads", "Based on CRAN statistics")
 
-stats %>%
-  filter(count > 0) %>%
+package_age <- stats %>%
+  filter(count > 0 | package == "autoEDA") %>%
   group_by(package) %>%
   summarise(num_downloads = sum(count),
             first_day_cran = min(date),
@@ -190,4 +189,17 @@ stats %>%
   mutate(difference = interval(first_day_cran, today)) %>%
   mutate(years = difference %/% years(1),
          months = difference %/% months(1) - 12*(years)) %>%
-  select(-difference, -first_day_cran, -today)
+  select(-difference, -first_day_cran, -today) %>%
+  arrange(package) %>%
+  mutate(age = paste(paste0(years, "y"), paste0(months, "m")))
+
+pkgs_table_2 <- pkgs_table %>%
+  rename(`CRAN downloads` = all_downloads,
+         `CRAN release` = release_date) %>%
+  arrange(package)
+pkgs_table_2$age <- package_age$age
+
+pkgs_table_2 <- mutate(pkgs_table_2, age = ifelse(package == "autoEDA", "-", age))
+select(pkgs_table_2, package, `CRAN downloads`, `CRAN release`, age, stars, commits,
+       contributors, issues, forks) %>%
+  xtable::xtable()
