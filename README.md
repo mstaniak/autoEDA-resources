@@ -138,6 +138,7 @@ A list of software and papers related to automated Exploratory Data Analysis, in
 - [Extracting Top-K Insights from Multi-dimensional Data](http://www4.comp.polyu.edu.hk/~csbtang/pub/SIGMOD17_insight.pdf).
 - [Agency plus Automation: Designing Artificial Intelligence into Interactive Systems](http://idl.cs.washington.edu/files/2019-AgencyPlusAutomation-PNAS.pdf)
 - [The Landscape of R Packages for Automated Exploratory Data Analysis](https://www.researchgate.net/publication/332014513_The_Landscape_of_R_Packages_for_Automated_Exploratory_Data_Analysis)
+- [Issues in Automating Exploratory Data Analysis](https://pdfs.semanticscholar.org/ce09/ef8113c473e78c1896989d6ab6dd01fa9706.pdf)
 
 ## Visualization recommendation
 
