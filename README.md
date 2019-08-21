@@ -6,6 +6,8 @@ A list of software and papers related to automated Exploratory Data Analysis, in
    - augmented analytics,
    - visualization recommendation and other tools that speed up data exploration (visual exploration in particular).
 
+Pull requests with software, paper and conference presentations are welcome.
+
 # Software
 
 ## R packages
