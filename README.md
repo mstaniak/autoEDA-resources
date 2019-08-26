@@ -76,6 +76,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 ### Related packages
 
+- [featuretoolsR](https://github.com/magnusfurugard/featuretoolsR) (CRAN package) - R port to Python library for automated feature engineering.
+
 - [vtreat](https://cran.r-project.org/web/packages/vtreat/index.html) (CRAN package) - data treatment (pre-processing) that includes dealing with missing data and large categorical variables. Details can be found in the [paper about vtreat](https://arxiv.org/pdf/1611.09477.pdf).
 
 - [report](https://github.com/easystats/report) - automated modeling report generation.
@@ -111,6 +113,8 @@ Pull requests with software, paper and conference presentations are welcome.
 - [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
 
 ### Related packages
+
+- [featuretools](https://www.featuretools.com/) - library for automated feature engineering.
 
 - [pyvtreat](https://github.com/WinVector/pyvtreat) - Python version of the R's vtreat package.
 
