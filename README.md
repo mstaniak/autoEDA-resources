@@ -104,9 +104,9 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [speedML](https://speedml.com) (pip library) - large library for ML with module dedicated to fast EDA. 
 
-### Packages in Development
+- [edaviz](https://github.com/FlorianWetschoreck/edaviz) - Python library for fast data exploration that provides functions for dataset overviews, bivariate plots and finding good predictors. (Free version only works for small datasets).
 
-- [edaviz](https://github.com/FlorianWetschoreck/edaviz) - Python library for fast data exploration in private beta testing phase. Will provide functions for dataset overviews, bivariate plots and finding good predictors.
+### Packages in Development
 
 - [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
 
