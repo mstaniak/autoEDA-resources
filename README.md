@@ -50,6 +50,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [janitor](https://cran.r-project.org/package=janitor) (CRAN package) - a tools for fast data cleaning. All functionalities are introduced in the [vignette](https://cran.r-project.org/web/packages/janitor/vignettes/janitor.html).
 
+- [autoplotly](https://cran.r-project.org/package=autoplotly) (CRAN package) - a library for fast visualization of statistical results supported by ggfortify. Details can be found in the [vignette](https://cran.r-project.org/web/packages/autoplotly/vignettes/intro.html) or [JOSS paper](https://joss.theoj.org/papers/10.21105/joss.00657)
+
 ### Packages in Development
 
 - [AEDA](https://github.com/tuanle618/AEDA) (GitHub package) - summary statistics, correlation analysis, cluster analysis, PCA & other projections.
