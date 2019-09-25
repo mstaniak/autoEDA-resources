@@ -160,6 +160,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [DIVE: A Mixed-Initiative System Supporting Integrated Data Exploration Workflows](https://dive.media.mit.edu/assets/DIVE_HILDA_2018.pdf). The web app is available on [MIT website](https://dive.media.mit.edu/).
 - [Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations](https://ieeexplore.ieee.org/document/7192728).
 - [VizML: A Machine Learning Approach to Visualization Recommendation](https://dl.acm.org/citation.cfm?id=3300358)
+- [VizDeck: Streamlining Exploratory Visual Analytics of Scientific Data](https://faculty.washington.edu/billhowe/publications/pdfs/perry2013vizdeck.pdf)
 
 ## Augmented analytics
 
