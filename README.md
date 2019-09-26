@@ -152,6 +152,8 @@ Pull requests with software, paper and conference presentations are welcome.
 - [The Landscape of R Packages for Automated Exploratory Data Analysis](https://journal.r-project.org/archive/2019/RJ-2019-033/index.html)
 - [Issues in Automating Exploratory Data Analysis](https://pdfs.semanticscholar.org/ce09/ef8113c473e78c1896989d6ab6dd01fa9706.pdf)
 - [Automating anomaly detection for exploratory data analytics](https://ieeexplore.ieee.org/abstract/document/8365228)
+- [Task-Oriented Optimal Sequencing of Visualization Charts](https://arxiv.org/abs/1908.02502)
+
 
 ## Visualization recommendation
 
