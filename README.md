@@ -161,6 +161,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [Foresight: Recommending Visual Insights](http://www.vldb.org/pvldb/vol10/p1937-parthasarathy.pdf) - Foresight is a system that helps the user rapidly discover visual insights from large high-dimensional datasets.
 - [DIVE: A Mixed-Initiative System Supporting Integrated Data Exploration Workflows](https://dive.media.mit.edu/assets/DIVE_HILDA_2018.pdf). The web app is available on [MIT website](https://dive.media.mit.edu/).
 - [Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations](https://ieeexplore.ieee.org/document/7192728).
+- [Voyager 2: Augmenting Visual Analysis with Partial View Specifications](https://idl.cs.washington.edu/files/2017-Voyager2-CHI.pdf)
 - [VizML: A Machine Learning Approach to Visualization Recommendation](https://dl.acm.org/citation.cfm?id=3300358)
 - [VizDeck: Streamlining Exploratory Visual Analytics of Scientific Data](https://faculty.washington.edu/billhowe/publications/pdfs/perry2013vizdeck.pdf)
 
