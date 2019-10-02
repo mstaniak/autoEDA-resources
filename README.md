@@ -78,6 +78,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [ExPanDaR](https://cran.r-project.org/web/packages/ExPanDaR/index.html) - package for interactive data visualization. Designed for longitudinal data, but can be also used with other types of data after setting an artificial time variable. Shiny apps with examples are provided on the [github website of the package](https://github.com/joachim-gassen/ExPanDaR).
 
+- [brolgar](https://github.com/njtierney/brolgar) (GitHub package) - tools to assist in longitudinal data analysis
+
 ### Related packages
 
 - [featuretoolsR](https://github.com/magnusfurugard/featuretoolsR) (CRAN package) - R port to Python library for automated feature engineering.
