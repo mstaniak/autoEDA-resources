@@ -157,7 +157,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [Task-Oriented Optimal Sequencing of Visualization Charts](https://arxiv.org/abs/1908.02502)
 - [A Rank-by-Feature Framework for Interactive Exploration of Multidimensional Data](https://www.cs.umd.edu/hcil/hce/presentations/seo_shneiderman_rff_ivs.pdf) - A paper that describe many measures that can be used to sort 1d and 2d data displays.
 - [Towards a benefit-based optimizer for Interactive Data Analysis](http://ceur-ws.org/Vol-2324/Paper16-PMarcel.pdf)
-
+- [Spotfire: an information exploration environment](https://dl.acm.org/citation.cfm?id=245893)
 
 ## Visualization recommendation frameworks
 
