@@ -92,6 +92,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [gtsummary](https://github.com/ddsjoberg/gtsummary) (GitHub package) - presentation-ready tables summarizing data sets, regression models, and more.
 
+- [clean](https://github.com/msberends/clean) (CRAN package) - fast data cleaning.
+
 ## Python libraries
 
 ### Complete Packages
