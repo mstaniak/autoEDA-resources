@@ -94,6 +94,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [clean](https://github.com/msberends/clean) (CRAN package) - fast data cleaning.
 
+- [finalfit] (CRAN package) - tables and plots to quickly visualize regression results.
+
 ## Python libraries
 
 ### Complete Packages
