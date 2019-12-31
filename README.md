@@ -130,6 +130,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [pyvtreat](https://github.com/WinVector/pyvtreat) - Python version of the R's vtreat package.
 
+- [autoimpute](https://github.com/kearnz/autoimpute) - easier handling of missing values.
+
 ## Stata packages
 
 - [eda](https://github.com/wbuchanan/eda) - a package that produces a pdf report with all permutations of univariate and bivariate visualizations and tables. Notably, three-dimensional displays are also possible.
