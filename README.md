@@ -124,7 +124,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
 
-- [python-summary](https://github.com/mouradmourafiq/pandas-summary) - simple extension to pandas.describe.
+- [pandas-summary](https://github.com/mouradmourafiq/pandas-summary) - simple extension to pandas.describe.
 
 ### Related packages
 
