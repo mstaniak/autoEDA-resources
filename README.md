@@ -12,7 +12,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 ## R packages
 
-[My summary of R packages is in R Journal](https://journal.r-project.org/archive/2019/RJ-2019-033/index.html)
+[My summary of R packages is in R Journal](https://www.researchgate.net/publication/332014513_The_Landscape_of_R_Packages_for_Automated_Exploratory_Data_Analysis)
 
 ### Complete Packages
 
