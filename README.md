@@ -52,6 +52,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [autoplotly](https://cran.r-project.org/package=autoplotly) (CRAN package) - a library for fast visualization of statistical results supported by ggfortify. Details can be found in the [vignette](https://cran.r-project.org/web/packages/autoplotly/vignettes/intro.html) or [JOSS paper](https://joss.theoj.org/papers/10.21105/joss.00657)
 
+- [brinton](https://cran.r-project.org/web/packages/brinton/index.html) (CRAN package) - packages for quick exploration and visualization. Details can be found in the [documentation](https://sciencegraph.github.io/brinton/).
+
 ### Packages in Development
 
 - [AEDA](https://github.com/tuanle618/AEDA) (GitHub package) - summary statistics, correlation analysis, cluster analysis, PCA & other projections.
