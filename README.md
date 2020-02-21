@@ -168,6 +168,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [A Rank-by-Feature Framework for Interactive Exploration of Multidimensional Data](https://www.cs.umd.edu/hcil/hce/presentations/seo_shneiderman_rff_ivs.pdf) - A paper that describe many measures that can be used to sort 1d and 2d data displays.
 - [Towards a benefit-based optimizer for Interactive Data Analysis](http://ceur-ws.org/Vol-2324/Paper16-PMarcel.pdf)
 - [Spotfire: an information exploration environment](https://dl.acm.org/citation.cfm?id=245893)
+- [AlphaClean: Automatic Generation ofData Cleaning Pipelines](https://arxiv.org/pdf/1904.11827.pdf)
 
 ## Visualization recommendation frameworks
 
