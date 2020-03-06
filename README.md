@@ -120,6 +120,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [edaviz](https://github.com/FlorianWetschoreck/edaviz) - Python library for fast data exploration that provides functions for dataset overviews, bivariate plots and finding good predictors. (Free version only works for small datasets).
 
+- [AutoViz](https://github.com/AutoViML/AutoViz) - Python library for automated visualization.
+
 ### Packages in Development
 
 - [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
