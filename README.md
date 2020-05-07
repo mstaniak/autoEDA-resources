@@ -156,7 +156,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [elycite](http://lrei.github.io/elycite/) - tools for exploration and modelling available (locally) as an web application. Designed for NLP problems.
 
-# Papers
+# Papers and short articles
 
 ## Methods and tools for autoEDA
 
@@ -171,6 +171,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [Towards a benefit-based optimizer for Interactive Data Analysis](http://ceur-ws.org/Vol-2324/Paper16-PMarcel.pdf)
 - [Spotfire: an information exploration environment](https://dl.acm.org/citation.cfm?id=245893)
 - [AlphaClean: Automatic Generation ofData Cleaning Pipelines](https://arxiv.org/pdf/1904.11827.pdf)
+- [Testing MS Excel's autoEDA tool](https://medium.com/datadriveninvestor/automated-exploratory-data-analysis-test-driving-ms-excels-ideas-feature-514f34d944e8#9cad-50ae56ae88ac)
 
 ## Visualization recommendation frameworks
 
