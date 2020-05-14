@@ -72,6 +72,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [seda](https://github.com/bruno-pinheiro/seda) (GitHub package) - fast EDA tool in active development.
 
+- [dfvis](https://github.com/talegari/dfvis) (GitHub package) - ggplot2 based implementation of tabplot.
+
 ### Domain-specific packages
 
 - [compMS2Miner: An Automatable Metabolite Identification, Visualization, and Data-Sharing R Package for High-Resolution LC-MS Data Sets](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6338221/)
