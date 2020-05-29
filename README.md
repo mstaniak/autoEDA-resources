@@ -106,6 +106,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 ### Complete Packages
 
+- [DataPrep](https://github.com/sfu-db/dataprep) (pip library) - data preparation library with an EDA package.
+
 - [Dora](https://github.com/NathanEpstein/Dora) (pip library) - data cleaning, featuring engineering and simple modeling tools.
 
 - [statsModels](http://www.statsmodels.org) (pip library) - collection of statistical tools, including EDA.
