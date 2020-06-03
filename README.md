@@ -126,6 +126,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [AutoViz](https://github.com/AutoViML/AutoViz) - Python library for automated visualization.
 
+- [ExploriPy](https://github.com/exploripy/exploripy) - Python library for various EDA tasks.
+
 ### Packages in Development
 
 - [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
