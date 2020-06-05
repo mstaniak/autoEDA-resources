@@ -14,7 +14,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 [My summary of R packages is in R Journal](https://www.researchgate.net/publication/332014513_The_Landscape_of_R_Packages_for_Automated_Exploratory_Data_Analysis)
 
-### Complete Packages
+### General Packages
 
 - [dataMaid](https://github.com/ekstroem/dataMaid) (CRAN package) - automated checks of data validity.
 
@@ -25,8 +25,6 @@ Pull requests with software, paper and conference presentations are welcome.
 - [SmartEDA](https://cran.r-project.org/package=SmartEDA) (CRAN package) - automated generation of descriptive statistics and uni- and bivariate plots, parallel coordinate plots. Details can be found in a [dedicated paper](https://www.researchgate.net/publication/331700451_SmartEDA_An_R_Package_for_Automated_Exploratory_Data_Analysis). 
 
 - [autoEDA](https://github.com/XanderHorn/autoEDA) (GitHub package) - automated EDA with uni- and bivariate plots. An article with an introduction can be found on [LinkedIn](https://www.linkedin.com/pulse/automated-exploratory-data-analysis-r-xander-horn/).
-
-    * [auto-EDA](https://github.com/souravbose1991/Auto-EDA) (GitHub package) - uni- and bivariate plots for data exploration in regression and classification problem. The package cleans data automatically to improve the plots. Another version of Xander Horn's package.
 
 - [visdat](https://github.com/ropensci/visdat) (CRAN package) - 6 exploratory/diagnostic plots for initial data analysis.
 
@@ -54,25 +52,18 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [brinton](https://cran.r-project.org/web/packages/brinton/index.html) (CRAN package) - packages for quick exploration and visualization. Details can be found in the [documentation](https://sciencegraph.github.io/brinton/).
 
-### Packages in Development
-
 - [AEDA](https://github.com/tuanle618/AEDA) (GitHub package) - summary statistics, correlation analysis, cluster analysis, PCA & other projections.
-
-- [dataexpks](https://github.com/DublinLearningGroup/dataexpks) (GitHub package) - quick reports with basic data summaries.
 
 - [automatic-data-explorer](https://github.com/elastacloud/automatic-data-explorer/) (GitHub package) - basic EDA and creating Markdown reports from multiple R scripts.
 
 - [xda](https://github.com/ujjwalkarn/xda) (GitHub package) - basic data summaries.
 
-- [EDA](https://github.com/JamesDavidLawrence/EDA) - stub of a package.
-
 - [modeler](https://github.com/mattmills49/modeler) (GitHub package) - tools for exploration and pre-processing.
 
 - [IEDA](https://github.com/krupanss/IEDA) (GitHub package) - EDA simplified through interactive visualization.
 
-- [seda](https://github.com/bruno-pinheiro/seda) (GitHub package) - fast EDA tool in active development.
-
 - [dfvis](https://github.com/talegari/dfvis) (GitHub package) - ggplot2 based implementation of tabplot.
+
 
 ### Domain-specific packages
 
@@ -83,6 +74,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [ExPanDaR](https://cran.r-project.org/web/packages/ExPanDaR/index.html) - package for interactive data visualization. Designed for longitudinal data, but can be also used with other types of data after setting an artificial time variable. Shiny apps with examples are provided on the [github website of the package](https://github.com/joachim-gassen/ExPanDaR).
 
 - [brolgar](https://github.com/njtierney/brolgar) (GitHub package) - tools to assist in longitudinal data analysis
+
 
 ### Related packages
 
@@ -102,9 +94,10 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [modelsummary](https://github.com/vincentarelbundock/modelsummary) (GitHub package) - summary tables for regression models.
 
+
 ## Python libraries
 
-### Complete Packages
+### General Packages
 
 - [DataPrep](https://github.com/sfu-db/dataprep) (pip library) - data preparation library with an EDA package.
 
@@ -128,13 +121,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [ExploriPy](https://github.com/exploripy/exploripy) - Python library for various EDA tasks.
 
-### Packages in Development
-
-- [basic-auto-EDA](https://github.com/AnkushAppy/basic-auto-eda) (GitHub library) - automatic report generation.
-
-- [automated_EDA](https://github.com/hari2594/Automated_EDA) - stub of a library.
-
 - [pandas-summary](https://github.com/mouradmourafiq/pandas-summary) - simple extension to pandas.describe.
+
 
 ### Related packages
 
@@ -144,9 +132,11 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [autoimpute](https://github.com/kearnz/autoimpute) - easier handling of missing values.
 
+
 ## Stata packages
 
 - [eda](https://github.com/wbuchanan/eda) - a package that produces a pdf report with all permutations of univariate and bivariate visualizations and tables. Notably, three-dimensional displays are also possible.
+
 
 ## Web services
 
@@ -156,11 +146,13 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - Several Shiny apps by R Squared Computing, including [visulizer](https://www.rsquaredcomputing.com/shiny/xplorerr/) and [descriptr](https://www.rsquaredcomputing.com/shiny/descriptr/).
 
+
 ## Standalone software
 
 - [auto-eda](https://github.com/darenasc/auto-eda) - automatic EDA with SQL.
 
 - [elycite](http://lrei.github.io/elycite/) - tools for exploration and modelling available (locally) as an web application. Designed for NLP problems.
+
 
 # Papers and short articles
 
