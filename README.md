@@ -123,6 +123,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [pandas-summary](https://github.com/mouradmourafiq/pandas-summary) - simple extension to pandas.describe.
 
+- [sweetviz](https://github.com/fbdesignpro/sweetviz) - visualizations for automated EDA.
 
 ### Related packages
 
