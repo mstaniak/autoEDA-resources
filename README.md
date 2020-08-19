@@ -133,6 +133,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [autoimpute](https://github.com/kearnz/autoimpute) - easier handling of missing values.
 
+- [Auto_TS](https://github.com/AutoViML/Auto_TS) - automated time series modeling.
 
 ## Stata packages
 
