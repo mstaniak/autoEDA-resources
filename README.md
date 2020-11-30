@@ -75,6 +75,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [brolgar](https://github.com/njtierney/brolgar) (GitHub package) - tools to assist in longitudinal data analysis
 
+- [POMA](https://github.com/pcastellanoescuder/POMA) (Bioconductor package) - Structured, reproducible and easy-to-use workflow for the visualization, pre-processing, exploratory data analysis and statistical analysis of mass spectrometry data. POMA R/Shiny version available [here](https://github.com/pcastellanoescuder/POMAShiny).
+
 
 ### Related packages
 
