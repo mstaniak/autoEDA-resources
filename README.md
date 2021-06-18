@@ -183,6 +183,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [Voyager 2: Augmenting Visual Analysis with Partial View Specifications](https://idl.cs.washington.edu/files/2017-Voyager2-CHI.pdf)
 - [VizML: A Machine Learning Approach to Visualization Recommendation](https://dl.acm.org/citation.cfm?id=3300358)
 - [VizDeck: Streamlining Exploratory Visual Analytics of Scientific Data](https://faculty.washington.edu/billhowe/publications/pdfs/perry2013vizdeck.pdf)
+- [Taggle: Scalable Visualization of Tabular Data through Aggregation](https://sci.utah.edu/~vdl/papers/2017_preprint_taggle.pdf)
 
 ## Augmented analytics
 
