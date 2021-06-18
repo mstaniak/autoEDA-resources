@@ -101,7 +101,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 ### General Packages
 
-- [DataPrep](https://github.com/sfu-db/dataprep) (pip library) - data preparation library with an EDA package.
+- [DataPrep](https://github.com/sfu-db/dataprep) (pip library) - data preparation library with an EDA package. [Paper about the package](https://arxiv.org/pdf/2104.00841.pdf)
 
 - [Dora](https://github.com/NathanEpstein/Dora) (pip library) - data cleaning, featuring engineering and simple modeling tools.
 
