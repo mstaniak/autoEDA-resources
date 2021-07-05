@@ -121,6 +121,8 @@ Pull requests with software, paper and conference presentations are welcome.
 
 - [AutoViz](https://github.com/AutoViML/AutoViz) - Python library for automated visualization.
 
+- [AutoViML](https://github.com/AutoViML/Auto_ViML) - Automatically Build Multiple Machine Learning Models with a Single Line of Code.
+
 - [ExploriPy](https://github.com/exploripy/exploripy) - Python library for various EDA tasks.
 
 - [pandas-summary](https://github.com/mouradmourafiq/pandas-summary) - simple extension to pandas.describe.
@@ -130,6 +132,8 @@ Pull requests with software, paper and conference presentations are welcome.
 ### Related packages
 
 - [featuretools](https://www.featuretools.com/) - library for automated feature engineering.
+
+- [featurewiz](https://github.com/AutoViML/featurewiz) - Select the best features from your data set fast with a single line of code.
 
 - [pyvtreat](https://github.com/WinVector/pyvtreat) - Python version of the R's vtreat package.
 
