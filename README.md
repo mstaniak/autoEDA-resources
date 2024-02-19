@@ -162,6 +162,7 @@ Pull requests with software, paper and conference presentations are welcome.
 
 ## Methods and tools for autoEDA
 
+- [Datamations: Animated Explanations of Data Analysis Pipelines](https://dl.acm.org/doi/abs/10.1145/3411764.3445063)
 - [Interactive Data Exploration with “Big Data Tukey Plots”](http://www.absolutedc.com/resources/pdf/tukey.pdf) - automated visualization of big data.
 - [Extracting Top-K Insights from Multi-dimensional Data](http://www4.comp.polyu.edu.hk/~csbtang/pub/SIGMOD17_insight.pdf).
 - [Agency plus Automation: Designing Artificial Intelligence into Interactive Systems](http://idl.cs.washington.edu/files/2019-AgencyPlusAutomation-PNAS.pdf)
