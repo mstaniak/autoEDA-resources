@@ -126,6 +126,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [pandas-summary](https://github.com/mouradmourafiq/pandas-summary) - simple extension to pandas.describe.
 
 - [sweetviz](https://github.com/fbdesignpro/sweetviz) - visualizations for automated EDA.
+- [Chat2Query](https://docs.pingcap.com/tidbcloud/use-chat2query-api/) - Automated EDA OpenAPIs.
 
 ### Related packages
 
@@ -175,6 +176,7 @@ Pull requests with software, paper and conference presentations are welcome.
 - [Spotfire: an information exploration environment](https://dl.acm.org/citation.cfm?id=245893)
 - [AlphaClean: Automatic Generation ofData Cleaning Pipelines](https://arxiv.org/pdf/1904.11827.pdf)
 - [Testing MS Excel's autoEDA tool](https://medium.com/datadriveninvestor/automated-exploratory-data-analysis-test-driving-ms-excels-ideas-feature-514f34d944e8#9cad-50ae56ae88ac)
+- [Towards Automated Cross-domain Exploratory Data Analysis through Large Language Models](https://arxiv.org/pdf/2412.07214)
 
 ## Visualization recommendation frameworks
 
